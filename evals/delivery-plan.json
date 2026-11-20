@@ -1,0 +1,20 @@
+{
+  "scope_revision": "approved-example-1",
+  "mode": "split",
+  "slices": [
+    {
+      "key": "import-fixture",
+      "title": "Import and reopen one supported fixture",
+      "acceptance": ["The fixture imports and reopens after restart with the same record count."],
+      "wave": 1,
+      "depends_on": []
+    },
+    {
+      "key": "restore-fixture",
+      "title": "Restore the imported fixture after a failed migration rehearsal",
+      "acceptance": ["Restoration reproduces the saved record count and fixture fields."],
+      "wave": 2,
+      "depends_on": ["import-fixture"]
+    }
+  ]
+}

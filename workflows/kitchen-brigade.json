@@ -1,0 +1,144 @@
+{
+  "name": "Kitchen Brigade",
+  "roles": {
+    "product-and-design": "agents/product-and-design.md",
+    "delivery-lead": "agents/delivery-lead.md",
+    "engineering": "agents/engineering.md",
+    "verification": "agents/verification.md",
+    "release": "agents/release.md",
+    "project-approver": null
+  },
+  "columns": [
+    {
+      "key": "backlog",
+      "name": "Backlog",
+      "handler": null,
+      "targets": [
+        "shape",
+        "todo"
+      ]
+    },
+    {
+      "key": "shape",
+      "name": "Shape",
+      "handler": "product-and-design",
+      "targets": [
+        "approve_design",
+        "blocked"
+      ]
+    },
+    {
+      "key": "approve_design",
+      "name": "Approve Design",
+      "handler": "project-approver",
+      "targets": [
+        "plan_delivery",
+        "shape"
+      ]
+    },
+    {
+      "key": "plan_delivery",
+      "name": "Plan Delivery",
+      "handler": "delivery-lead",
+      "targets": [
+        "todo",
+        "in_delivery",
+        "shape",
+        "blocked"
+      ]
+    },
+    {
+      "key": "in_delivery",
+      "name": "In Delivery",
+      "handler": null,
+      "targets": [
+        "prepare_release",
+        "done",
+        "shape",
+        "blocked"
+      ]
+    },
+    {
+      "key": "todo",
+      "name": "Todo",
+      "handler": "engineering",
+      "targets": [
+        "build",
+        "blocked"
+      ]
+    },
+    {
+      "key": "build",
+      "name": "Build",
+      "handler": null,
+      "targets": [
+        "verify",
+        "shape",
+        "blocked"
+      ]
+    },
+    {
+      "key": "verify",
+      "name": "Verify",
+      "handler": "verification",
+      "targets": [
+        "todo",
+        "prepare_release",
+        "done",
+        "blocked"
+      ]
+    },
+    {
+      "key": "prepare_release",
+      "name": "Prepare Release",
+      "handler": "release",
+      "targets": [
+        "approve_release",
+        "blocked"
+      ]
+    },
+    {
+      "key": "approve_release",
+      "name": "Approve Release",
+      "handler": "project-approver",
+      "targets": [
+        "verify_release",
+        "prepare_release"
+      ]
+    },
+    {
+      "key": "verify_release",
+      "name": "Verify Release",
+      "handler": "release",
+      "targets": [
+        "done",
+        "blocked"
+      ]
+    },
+    {
+      "key": "blocked",
+      "name": "Blocked",
+      "handler": null,
+      "targets": []
+    },
+    {
+      "key": "done",
+      "name": "Done",
+      "handler": null,
+      "targets": []
+    },
+    {
+      "key": "cancelled",
+      "name": "Cancelled",
+      "handler": null,
+      "targets": []
+    }
+  ],
+  "owner_retained": [
+    "build",
+    "in_delivery",
+    "blocked"
+  ],
+  "runbook": "workflows/runbook.md",
+  "advisory_review": "agents/debate-council.md"
+}

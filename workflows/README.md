@@ -1,0 +1,24 @@
+# Kitchen Brigade workflow
+
+Kitchen uses one delivery board. Mike creates the first issue in Backlog and initiates Shape. Council is an optional advisory review during a stage.
+
+| Column | Intended handler | Exit |
+|---|---|---|
+| Backlog | None | Mike sends the initial issue to Shape. The Delivery Lead sends ready children to Todo. |
+| Shape | Product & Design | Post the proposed spec and send to Approve Design. Honour any explicit council hold. |
+| Approve Design | Mike | Approve the spec and send to Plan Delivery, or return to Shape. |
+| Plan Delivery | Delivery Lead | Send a self-contained issue to Todo. Publish a split plan and move the parent to In Delivery. |
+| In Delivery | None, retain Delivery Lead | Advance eligible waves on native wakeups. Send the final candidate to Prepare Release or close work that needs no release. |
+| Todo | Engineering | Start the run and enter Build. |
+| Build | None, retain Engineering | Post evidence and hand off to Verify. Return material scope changes to Shape. |
+| Verify | Verification | Send defects to Todo. Close integrated and verified children, or send a standalone release candidate to Prepare Release. |
+| Prepare Release | Release | Record the release packet and send to Approve Release. |
+| Approve Release | Mike | Initiate the authorized release and move to Verify Release, or return to Prepare Release. |
+| Verify Release | Release | Confirm the deployed revision and finish, or record the failure in Blocked. |
+| Blocked | None, retain current owner | Record the obstacle and resume point. Resume Engineering at Todo. |
+| Done | None | Agreed criteria verified. |
+| Cancelled | None | Reason for dropping the work recorded. |
+
+## Labels
+
+Issue types: `initiative`, `slice`, `discovery`, `bug`, `enhancement`, `factory-improvement`. Flags: `risk:high` for consequential changes, `needs-info` for a missing input, and `council` for an open advisory review. Clear temporary flags when resolved. The step owner checks the criteria before moving the issue. A label alone never dispatches work.
