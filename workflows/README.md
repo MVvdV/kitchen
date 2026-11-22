@@ -1,6 +1,6 @@
 # Kitchen Brigade workflow
 
-Kitchen uses one delivery board. Mike creates the first issue in Backlog and initiates Shape. Council is an optional advisory review during a stage.
+Product projects use this delivery board. Mike creates the first issue in Backlog and initiates Shape. Council is an optional advisory review during a stage. Kitchen’s [blueprint improvement process](../governance/blueprint-improvement.md) uses evidence from those product projects.
 
 | Column | Intended handler | Exit |
 |---|---|---|

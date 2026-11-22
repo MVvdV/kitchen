@@ -1,9 +1,10 @@
 # Kitchen Brigade
 
-Kitchen is the home for the workflow, reusable skills, role instructions, templates, scripts, and evals. The workflow defines who decides and what evidence is needed. Integrations describe how to apply those rules in individual tools.
+Kitchen maintains the shared delivery blueprint. Product projects use Kitchen Brigade for real delivery and provide the evidence Kitchen evaluates. Kitchen records and rolls out improvements that apply beyond the source project. The workflow defines who decides and what evidence is needed. Integrations describe how to apply those rules in individual tools.
 
 | Path | What belongs here |
 | --- | --- |
+| `governance/` | [How Kitchen evaluates product runs and improves the blueprint](governance/blueprint-improvement.md) |
 | `workflows/` | [Workflow](workflows/README.md), board blueprint, and [delivery and recovery rules](workflows/runbook.md) |
 | `agents/` | [Shared agent instructions](agents/shared.md) and role instructions |
 | `skills/` | Standalone skill directories using the Agent Skills format |
@@ -14,6 +15,4 @@ Kitchen is the home for the workflow, reusable skills, role instructions, templa
 
 A fresh run must be able to resume from the issue record and linked artifacts. Product specifications, source, and product-specific checks belong in the relevant application repository. Choose a model with the tools and permissions required for its role.
 
-Run `python3 scripts/check_repo.py` for offline repository checks. Pass a delivery-plan JSON path to validate that plan. Run the evaluation scenarios separately to observe agent behavior.
-
-This checkout is ready for review. Set the remote when the Kitchen repository is available.
+Run `python3 scripts/check_repo.py` for offline repository checks. Pass a delivery-plan JSON path to validate that plan. Observe live agent behavior through real product runs and record broadly applicable findings in Kitchen.
