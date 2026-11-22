@@ -8,6 +8,10 @@ Bind the intended agent roles to the corresponding columns after their agents ex
 
 Use an on-demand squad mention for the Debate Council. A guest council posts findings while the current assignee owns the transition.
 
+## Column order
+
+Multica puts Backlog and Todo at the front of the board. Todo is required and returns to that position when the workflow is saved. The blueprint lists the logical delivery order, where Plan Delivery sends a self-contained issue or eligible children to Todo. Use the explicit handoff targets to verify that path on both Kitchen Brigade and any project copy.
+
 ## Procedures
 
 - [Publish delivery tickets](procedures/publish-delivery-tickets.md)
