@@ -11,7 +11,7 @@ Kitchen maintains the shared delivery blueprint. Product projects use Kitchen Br
 | `templates/` | Spec, delivery plan, handoff, council, and release records |
 | `scripts/` | Offline repository and delivery-plan checks |
 | `evals/` | [Evaluation scenarios](evals/README.md) and a worked delivery-plan fixture |
-| `integrations/` | Tool-specific documentation, beginning with [Multica](integrations/multica/README.md) |
+| `integrations/` | Tool-specific documentation for [Multica](integrations/multica/README.md) and [FigCraft](integrations/figcraft/README.md) |
 
 A fresh run must be able to resume from the issue record and linked artifacts. Product specifications, source, and product-specific checks belong in the relevant application repository. Choose a model with the tools and permissions required for its role.
 
