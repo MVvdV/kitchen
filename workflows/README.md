@@ -5,11 +5,11 @@ Product projects use this delivery board. Mike creates the first issue in Todo a
 | Column | Intended handler | Exit |
 |---|---|---|
 | Todo | None | Mike sends intake to Shape. Park delivery slices here unassigned until Delivery moves eligible work to Build. |
-| Shape | Product & Design | Entering Shape starts collaboration. Keep the issue here through discussion and revisions. Post one review-ready artifact revision when ready. Mike approves it by moving directly to Plan Delivery. |
-| Plan Delivery | Delivery Lead | Verify Mike’s move from Shape and record the approved revision before planning. Explain missing or stale approval and return to Shape before dispatching. Send a self-contained issue to Build or publish a split plan and move the parent to In Delivery. |
+| Shape | Product & Design | Entering Shape starts collaboration. Keep the issue here through discussion and revisions. Set or reference the visual direction for UI work. Post one review-ready artifact revision when ready. Mike approves it by moving directly to Plan Delivery. |
+| Plan Delivery | Delivery Lead | Verify Mike’s move from Shape and record the approved revision before planning. Explain missing or stale approval and return to Shape before dispatching. Gate UI work on an [approved visual direction](runbook.md#visual-direction-before-build). Send a self-contained issue to Build or publish a split plan and move the parent to In Delivery. |
 | In Delivery | None, retain Delivery Lead | Advance eligible waves on native wakeups. Send the final candidate to Prepare Release or close work that needs no release. |
-| Build | Engineering | Post evidence and hand off to Verify. Return material scope changes to Shape. |
-| Verify | Verification | Send defects to Build. Close integrated and verified children, or send a standalone release candidate to Prepare Release. |
+| Build | Engineering | Confirm the approved visual direction before UI implementation. Post evidence and hand off to Verify. Return material scope changes to Shape. |
+| Verify | Verification | Compare rendered UI to the approved visual direction. Send defects to Build. Close integrated and verified children, or send a standalone release candidate to Prepare Release. |
 | Prepare Release | Release | Record the release packet and send to Approve Release. |
 | Approve Release | Mike | Initiate the authorized release and move to Verify Release, or return to Prepare Release. |
 | Verify Release | Release | Confirm the deployed revision and finish. Route recoverable failures to the responsible role. Use Blocked when recovery requires a human action. |
