@@ -8,6 +8,12 @@ Bind the intended agent roles to the corresponding columns after their agents ex
 
 Use an on-demand squad mention for the Debate Council. A guest council posts findings while the current assignee owns the transition.
 
+## Managed local checkouts
+
+For projects with concurrent local runs, use Worktree mode on the local directory resource. Give Multica a clean baseline checkout that follows the project's integration branch. Set the GitHub resource to the same branch. Update the local baseline by fast-forwarding it when idle after approved changes land. Issue-specific inputs can still pin an exact revision.
+
+Use the worktree Multica allocates. Keep disposable files in that worktree or a run-specific temporary directory, and publish durable evidence before finishing. During migration, verify two independent runs overlap in different worktrees, then retire idle manual worktrees after preserving any local files and checking their branches.
+
 ## Column order
 
 The workflow omits Backlog and uses the built-in Todo column for intake and parked work. Leave those issues unassigned. Move intake to Shape when Mike is ready, and move eligible approved work to Build to start Engineering.

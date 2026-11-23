@@ -6,6 +6,12 @@ The parent owns the application outcome. Keep the Delivery Lead assigned through
 
 Group work into numbered stages. Work in the same stage can start independently. Record all children unassigned in Todo before dispatching eligible first-wave work to Build. When a stage closes, check the actual outcomes and dependencies before promoting the next wave. A cancelled required child needs a recorded scope decision before advancing.
 
+## Checkouts and handoffs
+
+Use the project's managed checkout for work. Keep disposable files scoped to the run. Publish anything another run needs as a commit, pull request, or accessible issue artifact. Record the exact commit SHA or pull request and candidate SHA on the issue so Verification can reproduce the result.
+
+Run independent slices in isolated checkouts. Keep dependent slices parked until the predecessor's required revision and evidence are available. Use the recorded revision as input when picking up dependent work.
+
 ## Visual direction before Build
 
 Before dispatching work that will render or change a user-facing UI, require a link to the exact approved visual direction. This includes visible prototypes, spikes, and temporary screens. A ticket can inherit the approved project baseline when it covers the work. An exploratory visual variant belongs in Shape until the direction is ready for delivery.

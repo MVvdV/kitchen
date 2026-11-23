@@ -7,3 +7,4 @@
 5. Obey human approval and cancellation. A changed spec or release candidate invalidates the corresponding earlier approval. Material scope changes return to Shape.
 6. Use the documented tools and permissions for your role. Escalate a missing tool, permission, or decision with the last durable checkpoint and a concrete next action.
 7. Use the issue-label vocabulary in [the delivery workflow](../workflows/README.md#labels). Use `discovery` for research and prototypes. If an approved label is unavailable, leave the issue unlabelled.
+8. Use the project's managed checkout and keep disposable files scoped to the run. For code handoffs, record the exact commit SHA or pull request and candidate SHA. Start dependent work from its recorded, verified input revision.
