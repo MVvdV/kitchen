@@ -12,6 +12,10 @@ Use an on-demand squad mention for the Debate Council. A guest council posts fin
 
 The workflow omits Backlog and uses the built-in Todo column for intake and parked work. Leave those issues unassigned. Move intake to Shape when Mike is ready, and move eligible approved work to Build to start Engineering.
 
+## Issue labels
+
+Apply only the labels in the [Kitchen Brigade workflow](../../workflows/README.md#labels). Generated runtime briefs may include workspace label examples. Follow the workflow vocabulary when creating or updating Kitchen Brigade issues.
+
 ## Procedures
 
 - [Publish delivery tickets](procedures/publish-delivery-tickets.md)

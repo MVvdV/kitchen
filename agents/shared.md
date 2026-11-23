@@ -6,3 +6,4 @@
 4. Before repeating an external action, check whether it already happened. Resume matching child issues, pull requests, and release records. Never claim that a run, test, deployment, or approval succeeded without evidence for the relevant revision.
 5. Obey human approval and cancellation. A changed spec or release candidate invalidates the corresponding earlier approval. Material scope changes return to Shape.
 6. Use the documented tools and permissions for your role. Escalate a missing tool, permission, or decision with the last durable checkpoint and a concrete next action.
+7. Use the issue-label vocabulary in [the delivery workflow](../workflows/README.md#labels). Use `discovery` for research and prototypes. If an approved label is unavailable, leave the issue unlabelled.
