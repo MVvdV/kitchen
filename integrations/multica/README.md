@@ -31,12 +31,12 @@ Mike can sign in to GitHub CLI normally. Multica agents running under the same O
 | Stage | Agreement |
 | --- | --- |
 | Shape through Prepare Release | Use local commits, tests, previews, and Multica evidence. GitHub reads and existing check status may be used. Keep project writes, including pushes, pull requests, tags, published releases, and review comments, for the approved publication. |
-| Approve Release | Mike moves the issue from Prepare Release after the ready packet is posted. That move gives the Release agent permission to execute the packet. Release checks the latest transition in the issue timeline and records its event ID and the packet reference before publication. |
-| Verify Release | Check the published SHA and record the results in Multica. A different candidate, destination, or set of GitHub actions needs fresh approval. |
+| Ready for Release | Release moves the issue here after posting the complete packet. The column waits for Mike. |
+| Release & Verify | Mike moves the issue here from Ready for Release. Release checks the latest transition in the issue timeline and records its event ID and packet reference. It then publishes the approved candidate, verifies the published SHA, and records the results. A different candidate, destination, or set of GitHub actions needs fresh approval. |
 
 Local commits use the configured human Git identity. Omit automated co-author trailers, provider bylines, and session links from commits and publication text. For Claude Code, set `attribution.commit` and `attribution.pr` to empty strings and `attribution.sessionUrl` to false in the effective settings. Apply the same publication audit across all runtimes. Check read access, the intended account's write permission, and availability of the Git credential path during Prepare Release without attempting a write. A GitHub CLI login can authenticate a release push through its credential helper for the release command.
 
-Wire Prepare Release with no automatic next move and wire Approve Release to the Release agent. Bind the project approver to the intended workspace member ID in the handoff instructions. A status entered by a different member, an agent, or from a different column supplies no approval.
+Wire Prepare Release to the Release agent and set its next status to Ready for Release. Leave Ready for Release without a handler or automatic next move. Wire Release & Verify to the Release agent with Done as its next status and Prepare Release as the return status. In existing Multica workspaces, the Ready for Release and Release & Verify display names keep the immutable keys `approve_release` and `verify_release`. Bind the project approver to the intended workspace member ID. Only that member's direct move from Ready for Release supplies approval.
 
 ## Column order
 

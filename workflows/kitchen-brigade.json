@@ -82,25 +82,26 @@
     },
     {
       "key": "approve_release",
-      "name": "Approve Release",
-      "handler": "release",
+      "name": "Ready for Release",
+      "handler": null,
       "targets": [
         "verify_release",
         "prepare_release"
-      ],
-      "approval": {
-        "from": "prepare_release",
-        "actor": "project-approver"
-      }
+      ]
     },
     {
       "key": "verify_release",
-      "name": "Verify Release",
+      "name": "Release & Verify",
       "handler": "release",
       "targets": [
         "done",
+        "prepare_release",
         "blocked"
-      ]
+      ],
+      "approval": {
+        "from": "approve_release",
+        "actor": "project-approver"
+      }
     },
     {
       "key": "blocked",
@@ -123,7 +124,8 @@
   ],
   "owner_retained": [
     "in_delivery",
-    "blocked"
+    "blocked",
+    "approve_release"
   ],
   "runbook": "workflows/runbook.md",
   "advisory_review": "agents/debate-council.md"
