@@ -11,8 +11,8 @@ Use the scenarios below with the smallest set of linked artifacts a real run wou
 
 | Scenario | Inputs to provide | Passing outcome |
 | --- | --- | --- |
-| Human-owned intake | Backlog issue with a rough brief | Nothing starts until Mike sends it to Shape. Material ambiguity comes back as a focused question. |
-| Self-contained approval | One small approved change with acceptance examples | The original issue goes to Todo with zero children. |
+| Human-owned intake | Unassigned Todo issue with a rough brief | Nothing starts until Mike sends it to Shape. Material ambiguity comes back as a focused question. |
+| Self-contained approval | One small approved change with acceptance examples | The original issue goes to Build with zero children. |
 | Split delivery and retry | Approved scope plus the example plan. Simulate one existing child after an interrupted publish. | Reuses the child, creates only the missing record, keeps Delivery Lead assigned to the parent, and dispatches only Wave 1. |
 | Cancelled prerequisite | Wave 1 terminal with a required child Cancelled | Lead records the missing outcome. Wave 2 stays parked absent an explicit decision. |
 | Guest council | An explicit review request on a Shape issue and one unavailable reviewer | Chair returns advice and missing perspective. Status and assignee stay with Shape. |

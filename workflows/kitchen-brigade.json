@@ -10,12 +10,12 @@
   },
   "columns": [
     {
-      "key": "backlog",
-      "name": "Backlog",
+      "key": "todo",
+      "name": "Todo",
       "handler": null,
       "targets": [
         "shape",
-        "todo"
+        "build"
       ]
     },
     {
@@ -41,7 +41,7 @@
       "name": "Plan Delivery",
       "handler": "delivery-lead",
       "targets": [
-        "todo",
+        "build",
         "in_delivery",
         "shape",
         "blocked"
@@ -52,6 +52,7 @@
       "name": "In Delivery",
       "handler": null,
       "targets": [
+        "build",
         "prepare_release",
         "done",
         "shape",
@@ -59,18 +60,9 @@
       ]
     },
     {
-      "key": "todo",
-      "name": "Todo",
-      "handler": "engineering",
-      "targets": [
-        "build",
-        "blocked"
-      ]
-    },
-    {
       "key": "build",
       "name": "Build",
-      "handler": null,
+      "handler": "engineering",
       "targets": [
         "verify",
         "shape",
@@ -82,7 +74,7 @@
       "name": "Verify",
       "handler": "verification",
       "targets": [
-        "todo",
+        "build",
         "prepare_release",
         "done",
         "blocked"
@@ -135,7 +127,6 @@
     }
   ],
   "owner_retained": [
-    "build",
     "in_delivery",
     "blocked"
   ],

@@ -27,8 +27,9 @@ def check_blueprint():
         require(not missing, f"Unknown transition targets for {column['key']}: {missing}")
     for key in blueprint["owner_retained"]:
         require(by_key[key]["handler"] is None, f"{key} must retain its owner")
-    require(by_key["backlog"]["handler"] is None, "Backlog must remain manually initiated")
-    require(by_key["todo"]["handler"] == "engineering", "Todo must dispatch Engineering")
+    require("backlog" not in by_key, "Backlog must be omitted")
+    require(columns[0]["key"] == "todo" and by_key["todo"]["handler"] is None, "Todo must be first and have no handler")
+    require(by_key["build"]["handler"] == "engineering", "Build must dispatch Engineering")
     for key in ("approve_design", "approve_release"):
         require(by_key[key]["handler"] == "project-approver", f"{key} must have a human handler")
     for path in [*roles.values(), blueprint["advisory_review"], blueprint["runbook"]]:

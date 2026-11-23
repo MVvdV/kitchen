@@ -4,13 +4,13 @@ Use this guide to apply the [workflow](../../workflows/README.md) in Multica. Re
 
 ## Wiring
 
-Bind the intended agent roles to the corresponding columns after their agents exist. Give each role its instructions and the shared instructions. Keep Backlog, Build, In Delivery, and Blocked without automatic handlers. Set a one-shot retry or periodic recovery check only after choosing a compatible independent runtime and verifying permissions. Test the columns and handoffs with work started by Mike.
+Bind the intended agent roles to the corresponding columns after their agents exist. Give each role its instructions and the shared instructions. Keep Todo, In Delivery, and Blocked without automatic handlers. Bind Engineering to Build. Set a one-shot retry or periodic recovery check only after choosing a compatible independent runtime and verifying permissions. Test the columns and handoffs with work started by Mike.
 
 Use an on-demand squad mention for the Debate Council. A guest council posts findings while the current assignee owns the transition.
 
 ## Column order
 
-Multica puts Backlog and Todo at the front of the board. Todo is required and returns to that position when the workflow is saved. The blueprint lists the logical delivery order, where Plan Delivery sends a self-contained issue or eligible children to Todo. Use the explicit handoff targets to verify that path on both Kitchen Brigade and any project copy.
+The workflow omits Backlog and uses the built-in Todo column for intake and parked work. Leave those issues unassigned. Move intake to Shape when Mike is ready, and move eligible approved work to Build to start Engineering.
 
 ## Procedures
 
