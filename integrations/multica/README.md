@@ -10,9 +10,19 @@ Use an on-demand squad mention for the Debate Council. A guest council posts fin
 
 ## Managed local checkouts
 
-For projects with concurrent local runs, use Worktree mode on the local directory resource. Give Multica a clean baseline checkout that follows the project's integration branch. Set the GitHub resource to the same branch. Update the local baseline by fast-forwarding it when idle after approved changes land. Issue-specific inputs can still pin an exact revision.
+Use **Worktree** mode for projects with concurrent local agent runs. Attach one clean Git checkout per project as the baseline on the machine running the Multica daemon. Keep the human checkout separate.
 
-Use the worktree Multica allocates. Keep disposable files in that worktree or a run-specific temporary directory, and publish durable evidence before finishing. During migration, verify two independent runs overlap in different worktrees, then retire idle manual worktrees after preserving any local files and checking their branches.
+| Location | Purpose |
+| --- | --- |
+| `~/workspace/<project>` | Human checkout for day-to-day work and previews. |
+| `~/workspace/.multica-checkouts/<project>` | Default Kitchen path for the project's dedicated baseline checkout. The dot keeps workspace listings tidy. A visible path also works when configured on the project. |
+| Multica-allocated worktree | Isolated working directory for an agent run. Multica manages its location and branch. |
+
+In **In place** mode, an agent edits the attached folder directly. Multica serializes runs that use it. In **Worktree** mode, the same one attached folder supplies the baseline for separate Git worktrees. Parallel runs have their own files and index while sharing the repository's Git history. Later turns in the same agent issue conversation resume its work on its branch. Worktree isolation removes the shared-folder lock for independent runs. Runtime concurrency limits and issue dependencies still apply.
+
+Keep the baseline clean. Configure its upstream and the project's GitHub resource to use the same integration branch, normally `main`. After approved changes land, fast-forward the baseline while idle. Existing issue branches may need their own update, and dependent work uses the exact revision recorded in the handoff.
+
+Use the worktree Multica allocates. Keep disposable files in that worktree or a run-specific temporary directory. Publish durable evidence before finishing. During migration, verify two independent runs overlap in different worktrees, then retire idle manual worktrees after preserving any local files and checking their branches.
 
 ## Column order
 
