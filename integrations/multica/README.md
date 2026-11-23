@@ -10,7 +10,7 @@ Use an on-demand squad mention for the Debate Council. A guest council posts fin
 
 ## Workspace skills and MCP servers
 
-Use Multica's workspace libraries for skills and MCP servers. Import or refresh skill content from its maintained source and assign the workspace skill to the appropriate agents. Workspace owners or admins register MCP servers in **Workspace Settings → MCP**. Assign each library entry only to agents that use it.
+In a Multica deployment, use its workspace libraries for skills and MCP servers. Import or refresh skill content from its maintained source and assign the workspace skill to the appropriate agents. Workspace owners or admins register MCP servers in **Workspace Settings → MCP**. Assign each library entry only to agents that use it.
 
 The workspace MCP entry is the live configuration. Keep agent-private and provider runtime MCP settings free of copies of workspace-managed servers. Private entries take precedence when names collide. Tool executables and local services can live on the runtime machine. Kitchen stores tool-specific setup instructions and examples, and credentials belong in Multica.
 
