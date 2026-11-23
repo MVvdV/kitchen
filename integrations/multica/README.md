@@ -26,9 +26,17 @@ Use the worktree Multica allocates. Keep disposable files in that worktree or a 
 
 ## GitHub write gate
 
-Keep GitHub branch and tag creation, updates, and deletion blocked across all refs before release approval. Use a human-controlled admin session for the approved publication and restore the rules immediately afterward. Keep publishing and administration credentials out of agent runtimes for an independent permission boundary.
+Keep branch and tag creation, updates, and deletion blocked across all refs before release approval. A local Git commit and a Multica review artifact can be created before approval. A GitHub push, pull request, or release must wait for Mike's explicit approval of the exact candidate SHA and destination.
 
-Use the exact approved local commit and issue evidence for the handoff. Verify the published SHA and restore the gate before marking the release ready for verification.
+| Operator | GitHub access |
+| --- | --- |
+| Mike | Use the GitHub browser session for administration. For authenticated CLI work, use an OS account or environment isolated from the Multica daemon. |
+| Codex, Claude Code, and other Multica agents | Use local Git and Multica artifacts. Public GitHub content can be read anonymously. Keep publishing and administration credentials out of these runtimes. |
+| Approved release | Mike publishes the approved revision from an isolated session. Delegating publication to a designated Codex run requires an explicit workflow change and a release-specific credential supplied only to that run after approval. Repository administration stays in the human session. |
+
+A terminal and the Multica daemon can run under the same OS account and see the same GitHub CLI login or Git credential helper. Logging in from a different terminal window does not isolate the credential. Before rollout, check from the agent execution context for a GitHub CLI login, Git HTTPS or SSH credentials, and injected GitHub tokens. Record whether credentials are available without logging their values.
+
+After approval, check the commits being published for automated attribution, verify the published SHA, and restore the branch and tag gate before moving to Verify Release.
 
 ## Column order
 
