@@ -24,6 +24,12 @@ Keep the baseline clean. Configure its upstream and the project's GitHub resourc
 
 Use the worktree Multica allocates. Keep disposable files in that worktree or a run-specific temporary directory. Publish durable evidence before finishing. During migration, verify two independent runs overlap in different worktrees, then retire idle manual worktrees after preserving any local files and checking their branches.
 
+## GitHub write gate
+
+Keep GitHub branch and tag creation, updates, and deletion blocked across all refs before release approval. Use a human-controlled admin session for the approved publication and restore the rules immediately afterward. Keep publishing and administration credentials out of agent runtimes for an independent permission boundary.
+
+Use the exact approved local commit and issue evidence for the handoff. Verify the published SHA and restore the gate before marking the release ready for verification.
+
 ## Column order
 
 The workflow omits Backlog and uses the built-in Todo column for intake and parked work. Leave those issues unassigned. Move intake to Shape when Mike is ready, and move eligible approved work to Build to start Engineering.
