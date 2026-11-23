@@ -24,19 +24,17 @@ Keep the baseline clean. Configure its upstream and the project's GitHub resourc
 
 Use the worktree Multica allocates. Keep disposable files in that worktree or a run-specific temporary directory. Publish durable evidence before finishing. During migration, verify two independent runs overlap in different worktrees, then retire idle manual worktrees after preserving any local files and checking their branches.
 
-## GitHub write gate
+## GitHub publication
 
-Keep branch and tag creation, updates, and deletion blocked across all refs before release approval. A local Git commit and a Multica review artifact can be created before approval. A GitHub push, pull request, or release must wait for Mike's explicit approval of the exact candidate SHA and destination.
+Mike can sign in to GitHub CLI normally. Multica agents running under the same OS account may be able to use that login. GitHub login provides technical access. The workflow defines when agents have permission to use it for a write.
 
-| Operator | GitHub access |
+| Stage | Agreement |
 | --- | --- |
-| Mike | Use the GitHub browser session for administration. For authenticated CLI work, use an OS account or environment isolated from the Multica daemon. |
-| Codex, Claude Code, and other Multica agents | Use local Git and Multica artifacts. Public GitHub content can be read anonymously. Keep publishing and administration credentials out of these runtimes. |
-| Approved release | Mike publishes the approved revision from an isolated session. Delegating publication to a designated Codex run requires an explicit workflow change and a release-specific credential supplied only to that run after approval. Repository administration stays in the human session. |
+| Shape through Prepare Release | Use local commits, tests, previews, and Multica evidence. GitHub reads and existing check status may be used. Keep project writes, including pushes, pull requests, tags, published releases, and review comments, for the approved publication. |
+| Approve Release | Mike explicitly approves the exact candidate SHA, destination, and GitHub actions. Mike performs the publication or names Codex as the operator for that release. Design approval and moving the issue into the column do not grant permission to publish. |
+| Verify Release | Check the published SHA and record the results in Multica. A different candidate, destination, or set of GitHub actions needs fresh approval. |
 
-A terminal and the Multica daemon can run under the same OS account and see the same GitHub CLI login or Git credential helper. Logging in from a different terminal window does not isolate the credential. Before rollout, check from the agent execution context for a GitHub CLI login, Git HTTPS or SSH credentials, and injected GitHub tokens. Record whether credentials are available without logging their values.
-
-After approval, check the commits being published for automated attribution, verify the published SHA, and restore the branch and tag gate before moving to Verify Release.
+Local commits use the configured Git identity. Omit automated co-author trailers, provider bylines, and session links from commits and publication text. Set the runtime attribution options accordingly and inspect all outgoing commits and publication text before an approved push. Keep this inspection in the release record.
 
 ## Column order
 
