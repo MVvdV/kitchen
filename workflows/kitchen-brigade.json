@@ -23,17 +23,8 @@
       "name": "Shape",
       "handler": "product-and-design",
       "targets": [
-        "approve_design",
-        "blocked"
-      ]
-    },
-    {
-      "key": "approve_design",
-      "name": "Approve Design",
-      "handler": "project-approver",
-      "targets": [
         "plan_delivery",
-        "shape"
+        "blocked"
       ]
     },
     {

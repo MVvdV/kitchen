@@ -12,6 +12,10 @@ Use an on-demand squad mention for the Debate Council. A guest council posts fin
 
 The workflow omits Backlog and uses the built-in Todo column for intake and parked work. Leave those issues unassigned. Move intake to Shape when Mike is ready, and move eligible approved work to Build to start Engineering.
 
+## Design handoff
+
+Entering Shape starts Product & Design. Drafts and feedback stay in Shape. Use a note or suppress the comment trigger when you only want to leave feedback for later. The approver moves the card from Shape to Plan Delivery when ready. Delivery records the approval from the issue timeline before publishing tickets. See [Publish delivery tickets](procedures/publish-delivery-tickets.md).
+
 ## Issue labels
 
 Apply only the labels in the [Kitchen Brigade workflow](../../workflows/README.md#labels). Generated runtime briefs may include workspace label examples. Follow the workflow vocabulary when creating or updating Kitchen Brigade issues.

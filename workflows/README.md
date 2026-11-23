@@ -5,9 +5,8 @@ Product projects use this delivery board. Mike creates the first issue in Todo a
 | Column | Intended handler | Exit |
 |---|---|---|
 | Todo | None | Mike sends intake to Shape. Park delivery slices here unassigned until Delivery moves eligible work to Build. |
-| Shape | Product & Design | Post the proposed spec and send to Approve Design. Honour any explicit council hold. |
-| Approve Design | Mike | Approve the spec and send to Plan Delivery, or return to Shape. |
-| Plan Delivery | Delivery Lead | Send a self-contained issue to Build. Publish a split plan and move the parent to In Delivery. |
+| Shape | Product & Design | Entering Shape starts collaboration. Keep the issue here through discussion and revisions. Post one review-ready artifact revision when ready. Mike approves it by moving directly to Plan Delivery. |
+| Plan Delivery | Delivery Lead | Verify Mike’s move from Shape and record the approved revision before planning. Explain missing or stale approval and return to Shape before dispatching. Send a self-contained issue to Build or publish a split plan and move the parent to In Delivery. |
 | In Delivery | None, retain Delivery Lead | Advance eligible waves on native wakeups. Send the final candidate to Prepare Release or close work that needs no release. |
 | Build | Engineering | Post evidence and hand off to Verify. Return material scope changes to Shape. |
 | Verify | Verification | Send defects to Build. Close integrated and verified children, or send a standalone release candidate to Prepare Release. |

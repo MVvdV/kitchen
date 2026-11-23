@@ -30,8 +30,10 @@ def check_blueprint():
     require("backlog" not in by_key, "Backlog must be omitted")
     require(columns[0]["key"] == "todo" and by_key["todo"]["handler"] is None, "Todo must be first and have no handler")
     require(by_key["build"]["handler"] == "engineering", "Build must dispatch Engineering")
-    for key in ("approve_design", "approve_release"):
-        require(by_key[key]["handler"] == "project-approver", f"{key} must have a human handler")
+    require("approve_design" not in by_key, "Design approval is the move from Shape to Plan Delivery")
+    require(by_key["shape"]["handler"] == "product-and-design" and "plan_delivery" in by_key["shape"]["targets"], "Shape must dispatch Product & Design and support the Plan Delivery handoff")
+    require(by_key["plan_delivery"]["handler"] == "delivery-lead" and "shape" in by_key["plan_delivery"]["targets"], "Delivery must be able to return issues to Shape")
+    require(by_key["approve_release"]["handler"] == "project-approver", "Approve Release must have a human handler")
     for path in [*roles.values(), blueprint["advisory_review"], blueprint["runbook"]]:
         if path is not None:
             require((ROOT / path).is_file(), f"Missing workflow reference: {path}")
