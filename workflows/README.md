@@ -10,8 +10,8 @@ Product projects use this delivery board. Mike creates the first issue in Todo a
 | In Delivery | None, retain Delivery Lead | Advance eligible waves on native wakeups. Send the final candidate to Prepare Release or close work that needs no release. |
 | Build | Engineering | Confirm the approved visual direction before UI implementation. Post evidence and hand off to Verify. Return material scope changes to Shape. |
 | Verify | Verification | Compare rendered UI to the approved visual direction. Send defects to Build. Close integrated and verified children, or send a standalone release candidate to Prepare Release. |
-| Prepare Release | Release | Record the release packet and send to Approve Release. |
-| Approve Release | Mike | Initiate the authorized release and move to Verify Release, or return to Prepare Release. |
+| Prepare Release | Release | Post one complete, verified release packet and wait here for Mike. |
+| Approve Release | Release, triggered by Mike | Mike's move from Prepare Release approves the ready packet. Release verifies the approval, executes the prepared actions, and records what shipped. |
 | Verify Release | Release | Confirm the deployed revision and finish. Route recoverable failures to the responsible role. Use Blocked when recovery requires a human action. |
 | Blocked | None, retain current owner | Use when a specific human action is required outside normal review or discussion. Record the person, action, and resume stage. If an agent can take over, return the issue to the appropriate stage as that agent picks it up. |
 | Done | None | Agreed criteria verified. |

@@ -33,7 +33,10 @@ def check_blueprint():
     require("approve_design" not in by_key, "Design approval is the move from Shape to Plan Delivery")
     require(by_key["shape"]["handler"] == "product-and-design" and "plan_delivery" in by_key["shape"]["targets"], "Shape must dispatch Product & Design and support the Plan Delivery handoff")
     require(by_key["plan_delivery"]["handler"] == "delivery-lead" and "shape" in by_key["plan_delivery"]["targets"], "Delivery must be able to return issues to Shape")
-    require(by_key["approve_release"]["handler"] == "project-approver", "Approve Release must have a human handler")
+    release = by_key["approve_release"]
+    require(release["handler"] == "release", "Approve Release must dispatch Release")
+    require(release["approval"] == {"from": "prepare_release", "actor": "project-approver"}, "Release approval must be the project approver's move from Prepare Release")
+    require("approve_release" in by_key["prepare_release"]["targets"], "Prepare Release must support the human approval move")
     for path in [*roles.values(), blueprint["advisory_review"], blueprint["runbook"]]:
         if path is not None:
             require((ROOT / path).is_file(), f"Missing workflow reference: {path}")

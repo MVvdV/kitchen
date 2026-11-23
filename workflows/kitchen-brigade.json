@@ -83,11 +83,15 @@
     {
       "key": "approve_release",
       "name": "Approve Release",
-      "handler": "project-approver",
+      "handler": "release",
       "targets": [
         "verify_release",
         "prepare_release"
-      ]
+      ],
+      "approval": {
+        "from": "prepare_release",
+        "actor": "project-approver"
+      }
     },
     {
       "key": "verify_release",

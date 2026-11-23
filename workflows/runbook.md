@@ -24,7 +24,9 @@ Delivery records the reference and relevant states on each applicable issue befo
 
 Keep prototypes, product changes, and verification candidates local before release approval. Share review evidence in the issue. Use the configured Git author identity and omit automated co-author trailers, provider bylines, and session links.
 
-Prepare Release records the exact candidate SHA, checks, destination, and rollback. Approve Release asks Mike to explicitly approve that SHA and destination. An approval statement is required before publication. Obtain fresh approval if the candidate or destination changes. Mike publishes or explicitly names a release operator and authorizes the specific publishing actions. Check all outgoing commits and publication text for automated attribution, then record the published revision for Verify Release.
+Prepare Release posts one ready packet with the full candidate SHA, repository and target, exact GitHub actions, current target state, checks, prepared publication text, and rollback. Review all outgoing commits for the configured human Git identity and automated attribution, including on a first push to an empty branch. Keep prototypes outside the outgoing history and file tree unless the approved release explicitly includes them. Keep drafts and evidence in the issue.
+
+Mike approves by moving the issue directly from Prepare Release into Approve Release after the packet is posted. The move dispatches Release and supplies the approval. Release verifies the actor and transition against the existing packet, checks the candidate and target again, performs the prepared actions, and records the result for Verify Release. Return to Prepare Release if approval is missing or the packet, candidate, or target state has changed. Record the reason and obtain a fresh move. Reconcile any already published result before retrying.
 
 ## Recovery
 

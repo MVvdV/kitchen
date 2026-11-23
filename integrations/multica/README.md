@@ -31,10 +31,12 @@ Mike can sign in to GitHub CLI normally. Multica agents running under the same O
 | Stage | Agreement |
 | --- | --- |
 | Shape through Prepare Release | Use local commits, tests, previews, and Multica evidence. GitHub reads and existing check status may be used. Keep project writes, including pushes, pull requests, tags, published releases, and review comments, for the approved publication. |
-| Approve Release | Mike explicitly approves the exact candidate SHA, destination, and GitHub actions. Mike performs the publication or names Codex as the operator for that release. Design approval and moving the issue into the column do not grant permission to publish. |
+| Approve Release | Mike moves the issue from Prepare Release after the ready packet is posted. That move gives the Release agent permission to execute the packet. Release checks the latest transition in the issue timeline and records its event ID and the packet reference before publication. |
 | Verify Release | Check the published SHA and record the results in Multica. A different candidate, destination, or set of GitHub actions needs fresh approval. |
 
-Local commits use the configured Git identity. Omit automated co-author trailers, provider bylines, and session links from commits and publication text. Set the runtime attribution options accordingly and inspect all outgoing commits and publication text before an approved push. Keep this inspection in the release record.
+Local commits use the configured human Git identity. Omit automated co-author trailers, provider bylines, and session links from commits and publication text. For Claude Code, set `attribution.commit` and `attribution.pr` to empty strings and `attribution.sessionUrl` to false in the effective settings. Apply the same publication audit across all runtimes. Check read access, the intended account's write permission, and availability of the Git credential path during Prepare Release without attempting a write. A GitHub CLI login can authenticate a release push through its credential helper for the release command.
+
+Wire Prepare Release with no automatic next move and wire Approve Release to the Release agent. Bind the project approver to the intended workspace member ID in the handoff instructions. A status entered by a different member, an agent, or from a different column supplies no approval.
 
 ## Column order
 

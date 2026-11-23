@@ -1,10 +1,12 @@
 ---
 name: prepare-release
-description: Prepare an evidence-backed release decision or verify what shipped using a deployment record and smoke checks.
+description: Prepare a ready release packet, execute the exact approved GitHub actions, or verify the published result.
 ---
 
 # Prepare Release
 
-For preparation, identify the candidate revision, target, required checks, smoke tests, rollback path, and unresolved decisions. Return a release packet tied to that candidate. A changed candidate requires renewed evidence and any required approval.
+**Prepare.** Post one ready packet before requesting approval. Include the full candidate SHA and how to retrieve it, repository and target refs, expected current target SHA or absent state, exact publication actions and final text, required check results for this candidate, smoke checks, rollback, and release access readiness. Identify which checks run before publication and which are post-publication. Inspect the outgoing file changes and every introduced commit, including all reachable commits on the first push, for scope and attribution. Keep unrelated prototypes out of the release. Check author and committer identities, message trailers, provider bylines, and session links. Use the configured human Git identity and omit automated attribution. Leave the issue in Prepare Release.
 
-For verification, compare the deployed revision with the approved candidate and record the smoke results and deployment reference. Respect the authority granted by the caller and the deployment system.
+**Publish.** Use the workflow's approval record to match the approver, transition, target, and the one ready packet posted before the approval event. An approved move supplies the approval. Check current status and target state immediately before writing. Reconcile prior publication records and the remote before retrying, so completed actions are never repeated. Execute only the listed actions for the recorded SHA. Stop on missing evidence, drift, or an unauthorized action. Return the work to preparation with the reason. Record the actual published commit, actions, and references before handing off.
+
+**Verify.** Check the published revision against the approved SHA, run the agreed smoke checks, and record the outcome and references. Return problems through the workflow and request a fresh approval for a changed candidate, target, or publication action.
