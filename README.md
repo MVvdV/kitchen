@@ -1,6 +1,6 @@
 # Kitchen Brigade
 
-Kitchen maintains the shared delivery blueprint. Product projects use Kitchen Brigade for real delivery and provide the evidence Kitchen evaluates. Kitchen records and rolls out improvements that apply beyond the source project. The workflow defines who decides and what evidence is needed. Integrations describe how to apply those rules in individual tools.
+Kitchen maintains the shared delivery blueprint. Product projects use Kitchen Brigade for real delivery and provide the evidence Kitchen evaluates. Kitchen records and rolls out improvements that apply beyond the source project. The workflow defines who decides and what evidence is needed. Integrations describe how to apply those rules in individual tools. Multica's workspace libraries manage the skills and MCP servers assigned to agents.
 
 | Path | What belongs here |
 | --- | --- |

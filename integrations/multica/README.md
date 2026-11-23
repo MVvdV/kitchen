@@ -8,6 +8,14 @@ Bind the intended agent roles to the corresponding columns after their agents ex
 
 Use an on-demand squad mention for the Debate Council. A guest council posts findings while the current assignee owns the transition.
 
+## Workspace skills and MCP servers
+
+Use Multica's workspace libraries for skills and MCP servers. Import or refresh skill content from its maintained source and assign the workspace skill to the appropriate agents. Workspace owners or admins register MCP servers in **Workspace Settings → MCP**. Assign each library entry only to agents that use it.
+
+The workspace MCP entry is the live configuration. Keep agent-private and provider runtime MCP settings free of copies of workspace-managed servers. Private entries take precedence when names collide. Tool executables and local services can live on the runtime machine. Kitchen stores tool-specific setup instructions and examples, and credentials belong in Multica.
+
+For a migration, register the workspace entry, assign it to the intended agents, and verify the assignment. Remove the corresponding private or runtime entry once the replacement is in place. Verify a new run can use the workspace-provided server. See [FigCraft](../figcraft/README.md) for a local stdio example.
+
 ## Managed local checkouts
 
 Use **Worktree** mode for projects with concurrent local agent runs. Attach one clean Git checkout per project as the baseline on the machine running the Multica daemon. Keep the human checkout separate.
