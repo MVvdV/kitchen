@@ -16,6 +16,13 @@ The workflow omits Backlog and uses the built-in Todo column for intake and park
 
 Apply only the labels in the [Kitchen Brigade workflow](../../workflows/README.md#labels). Generated runtime briefs may include workspace label examples. Follow the workflow vocabulary when creating or updating Kitchen Brigade issues.
 
+## Runtime compatibility check
+
+1. Use a recent run from an affected product project. Read the generated runtime instructions and the project, workflow step, agent, and skill instructions supplied to that run. If there is no representative run, record what could be checked from the live configuration and inspect the first applicable product run before broader rollout.
+2. Compare the proposed revision with those instructions for the actions it changes. Check labels, status commands and handoffs, who can advance or approve work, and required artifacts. Distinguish generic examples from platform behavior the workflow must respect.
+3. Resolve a conflicting example in the project or agent instructions. If the runtime enforces different behavior, adjust the integration or hold rollout of the affected change. Leave generated runtime files under Multica's control.
+4. On the Kitchen issue, record the run or configuration checked, the blueprint revision, any conflict and its resolution, and what to verify on the next real product run.
+
 ## Procedures
 
 - [Publish delivery tickets](procedures/publish-delivery-tickets.md)

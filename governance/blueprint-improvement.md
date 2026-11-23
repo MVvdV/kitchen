@@ -19,6 +19,8 @@ Evaluate whether the cause is in the shared blueprint, tool integration, or prod
 
 Propose the smallest generally applicable change in this repository. Link the proposal from the Kitchen issue and state what the next applicable run should do differently. Update an eval when it helps reviewers judge that outcome.
 
+Before approving a blueprint change, record whether it affects instructions agents receive at runtime. For Multica changes, complete the [runtime compatibility check](../integrations/multica/README.md#runtime-compatibility-check) and record the result on the Kitchen issue. Resolve any conflict that would change what an agent does before rolling out the affected change.
+
 Record approval and the Git revision before updating live shared workflow, agent, or skill settings. A change to shared settings reaches every project using them. If the change warrants a limited rollout, first apply it to one real project using separate configuration where needed. Record the affected projects and the revision applied, then use subsequent product runs to check the result. Record whether the evidence supports keeping, revising, or rolling back the change.
 
 ## Proposed Kitchen board
