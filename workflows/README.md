@@ -12,8 +12,8 @@ Product projects use this delivery board. Mike creates the first issue in Todo a
 | Verify | Verification | Send defects to Build. Close integrated and verified children, or send a standalone release candidate to Prepare Release. |
 | Prepare Release | Release | Record the release packet and send to Approve Release. |
 | Approve Release | Mike | Initiate the authorized release and move to Verify Release, or return to Prepare Release. |
-| Verify Release | Release | Confirm the deployed revision and finish, or record the failure in Blocked. |
-| Blocked | None, retain current owner | Record the obstacle and resume point. Resume Engineering at Build. |
+| Verify Release | Release | Confirm the deployed revision and finish. Route recoverable failures to the responsible role. Use Blocked when recovery requires a human action. |
+| Blocked | None, retain current owner | Use when a specific human action is required outside normal review or discussion. Record the person, action, and resume stage. If an agent can take over, return the issue to the appropriate stage as that agent picks it up. |
 | Done | None | Agreed criteria verified. |
 | Cancelled | None | Reason for dropping the work recorded. |
 

@@ -12,7 +12,8 @@ Use the scenarios below with the smallest set of linked artifacts a real run wou
 | Scenario | Inputs to provide | Passing outcome |
 | --- | --- | --- |
 | Human-owned intake | Unassigned Todo issue with a rough brief | Nothing starts until Mike sends it to Shape. Material ambiguity comes back as a focused question. |
-| Shape discussion | A shaping run posts a review-ready revision. Mike adds a note without a run trigger. | The card stays in Shape and the note alone starts no run. |
+| Shape discussion | Return a design to Shape without revision instructions. Then Mike adds a note without a run trigger. | Product & Design asks what to change and ends its run in Shape. The note alone starts no run. |
+| Agent-resolvable blocker | A blocked issue has a prerequisite that a named agent can handle. | The owner chooses the resolver and records the observable condition. As the resolver takes over, work leaves Blocked for the appropriate stage. The workflow preserves its approvals. |
 | Approval by transition | An authorized move from Shape to Plan Delivery after a review-ready revision is posted | Delivery records the transition and revision with no separate approval comment from Mike. |
 | Missing or stale design approval | A move from another status, an ambiguous candidate, or a material revision change | Delivery posts the reason before returning the card to Shape. No work is dispatched. |
 | Self-contained approval | One small approved change with acceptance examples | The original issue goes to Build with zero children. |
