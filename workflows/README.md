@@ -17,6 +17,10 @@ Product projects use this delivery board. Mike creates the first issue in Todo a
 | Done | None | Agreed criteria verified. |
 | Cancelled | None | Reason for dropping the work recorded. |
 
+## Project directories
+
+Use the [project directory rules](project-directories.md) for managed checkouts, local artifacts, and prototype ownership across issues.
+
 ## Labels
 
 Issue types: `initiative`, `slice`, `discovery`, `bug`, `enhancement`, `factory-improvement`. Flags: `risk:high` for consequential changes, `needs-info` for a missing input, and `council` for an open advisory review. Use `discovery` for research, feasibility work, and prototypes that answer a specific question. This list is the complete issue-label vocabulary for projects using Kitchen Brigade. If an approved label is unavailable, leave the issue unlabelled. Clear temporary flags when resolved. The step owner checks the criteria before moving the issue. A label alone never dispatches work.
