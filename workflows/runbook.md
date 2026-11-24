@@ -8,7 +8,16 @@ Group work into numbered stages. Work in the same stage can start independently.
 
 ## Checkouts and handoffs
 
-Use the project's managed checkout for work. Keep durable local working files in an ignored folder inside the existing project tree. Use run-scoped temporary storage for disposable files and clean up your own files when done. Ask before creating a new sibling project or scratch directory in the workspace. Save versioned work as local commits and share evidence as accessible issue artifacts. Record the exact candidate before any external publication. Record the exact commit SHA or pull request and candidate SHA on the issue so Verification can reproduce the result.
+Use the project's managed checkout for work. Keep durable local working files in the visible, Git-ignored `artifacts/<issue-id>/` folder inside the project's shared checkout. Create subfolders when needed.
+
+| Location | Contents |
+| --- | --- |
+| `artifacts/<issue-id>/intake/` | Local copies of original inputs. |
+| `artifacts/<issue-id>/design/` | Editable canvases and prototype working files. |
+| `artifacts/<issue-id>/review/` | Revisioned previews, snapshots, and evidence for review. |
+| Managed worktree and product Git paths | Source code and authoritative versioned specs, briefs, or decisions. |
+
+Give each issue its own artifact directory. Use one agent writer per editable file and coordinate with a human collaborator before editing the same part of a canvas. Other runs can consume a named snapshot. Keep review exports revisioned and link or attach the exact revision in the issue. Git ignores the shared local folder, so transfers between machines depend on the issue attachments or another accessible artifact reference. Use run-scoped temporary storage for disposable files and clean up your own files when done. Ask before creating a new sibling project or scratch directory in the workspace. Save versioned work as local commits and share evidence as accessible issue artifacts. Record the exact candidate before any external publication. Record the exact commit SHA or pull request and candidate SHA on the issue so Verification can reproduce the result.
 
 Run independent slices in isolated checkouts. Keep dependent slices parked until the predecessor's required revision and evidence are available. Use the recorded revision as input when picking up dependent work.
 
