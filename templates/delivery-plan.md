@@ -4,6 +4,16 @@
 - **Decision** — Continue as one issue, or split into staged children.
 - **Combined acceptance and release criteria** —
 
+## Existing work reconciliation
+
+| Affected issue and candidate revision | Keep, Revise, or Supersede | Evidence and changed acceptance criteria | Dependencies, owner and next step |
+| --- | --- | --- | --- |
+| | | | |
+
+Record any unresolved release holds and material decisions for the product approver. If no work is affected, record the scope checked.
+
+## Delivery slices
+
 | Slice key | Outcome | Acceptance evidence | Prerequisite keys | Stage | Child issue |
 | --- | --- | --- | --- | --- | --- |
 | | | | | | |

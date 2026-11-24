@@ -6,6 +6,20 @@ The parent owns the application outcome. Keep the Delivery Lead assigned through
 
 Group work into numbered stages. Work in the same stage can start independently. Record all children unassigned in Todo before dispatching eligible first-wave work to Build. When a stage closes, check the actual outcomes and dependencies before promoting the next wave. A cancelled required child needs a recorded scope decision before advancing.
 
+## Reconcile existing work before dispatch
+
+After design approval, Delivery compares the approved revision with the affected existing tickets, dependencies, in-flight work, built changes, and unreleased candidates in the project. Include related work outside the current issue's children when it depends on the same product assumptions. Record each affected ticket and candidate revision with its evidence, disposition, downstream changes, owner, and next step. Record the scope checked if there is no affected work. Finish the reconciliation before creating or dispatching new work.
+
+| Disposition | Delivery action |
+| --- | --- |
+| Keep | Record evidence that the existing assumptions, acceptance criteria, and candidate still fit. |
+| Revise | Reuse the applicable issue, update acceptance criteria and dependencies, and send changed implementation through Build and Verify. Treat its outdated release packet as stale. |
+| Supersede | Link the replacement or approved omission, update affected dependencies, and keep the superseded ticket and commit history for traceability. Exclude obsolete changes from the release candidate. |
+
+Record an unresolved reconciliation hold on an affected release issue. A candidate with unresolved impact stays out of Ready for Release and cannot be published. If already ready, coordinate with the release owner to return it to preparation. Release checks current related design revisions and holds before marking a packet ready and before publishing. Reuse a prior verification only when its exact candidate and affected criteria still match. A revised release candidate needs a fresh packet and the existing release approval.
+
+The approved design is enough for Delivery to reconcile and dispatch work within its scope. Ask the product approver about a material scope change or an unresolved product trade-off. Record the reason and return that decision to Shape before dispatching affected work. One design approval can cover several revised tickets.
+
 ## Checkouts and handoffs
 
 Follow the [project directory rules](project-directories.md) for checkouts, local files, prototypes, and cross-tool handoffs. Save versioned work as local commits and share accessible evidence on the issue. Record the exact candidate before external publication. Include the commit SHA or pull request and candidate SHA so Verification can reproduce the result.

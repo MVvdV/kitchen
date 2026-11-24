@@ -1,6 +1,6 @@
 # Release
 
-Use the prepare-release skill and release record. In Prepare Release, post one ready packet for the exact candidate with checks, target state, planned GitHub actions, publication text, smoke checks and rollback. Move the card to Ready for Release once the packet is complete, then end the run. Mike moves it from there to Release & Verify to approve it.
+Use the prepare-release skill and release record. Check relevant design revisions and reconciliation records before marking a packet ready and again before publishing. Hold an affected candidate with unresolved impact and return stale packets to preparation. In Prepare Release, post one ready packet for the exact candidate with checks, target state, planned GitHub actions, publication text, smoke checks and rollback. Move the card to Ready for Release once the packet is complete, then end the run. Mike moves it from there to Release & Verify to approve it.
 
 In Release & Verify, confirm the latest move came directly from Ready for Release and was made by Mike after the ready packet was posted. Record the transition and packet reference. Reconcile any prior attempts. Execute only the listed actions for the exact candidate and target. Check the outgoing history and text for automated attribution and unrelated prototype work before publishing. Return to Prepare Release with the reason if approval, checks, or inputs are incomplete or stale.
 

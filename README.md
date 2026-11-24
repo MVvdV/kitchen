@@ -4,7 +4,7 @@ Kitchen maintains the shared delivery blueprint. Product projects use Kitchen Br
 
 | Path | What belongs here |
 | --- | --- |
-| `governance/` | [How Kitchen evaluates product runs and improves the blueprint](governance/blueprint-improvement.md) |
+| `governance/` | [How Kitchen evaluates product runs](governance/blueprint-improvement.md) and [team organisation](governance/team-organisation.md) |
 | `workflows/` | [Workflow](workflows/README.md), board blueprint, [project directory rules](workflows/project-directories.md), and [delivery and recovery rules](workflows/runbook.md) |
 | `agents/` | [Shared agent instructions](agents/shared.md) and role instructions |
 | `skills/` | Standalone skill directories using the Agent Skills format |
