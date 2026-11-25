@@ -5,9 +5,11 @@ description: Work with a collaborator on an explicitly selected FigCraft canvas 
 
 # FigCraft Canvas
 
-Use the assigned local FigCraft MCP connection when the issue identifies FigCraft as its design tool. Confirm the open document and target page or frame with `inspect_document`. Pass the document ID on supported calls so a tab change does not redirect work. If the canvas cannot be confirmed, ask for the document to be opened or identified before editing.
+Use the assigned FigCraft MCP connection. Confirm the open file and target page or frame using `inspect_document`. Pass the explicit `document` ID or open file path on every supported call, including inspection, edits, exports, and saves. If the target is unclear or closed, pause and ask the collaborator to identify or open it. A tool that depends on the front tab needs exclusive use of the app for that operation.
 
-Use semantic layer tools, and keep each change small enough to inspect together. If an attached call times out, inspect the document before retrying because the app may already have applied it. Use the allowed project folder for saves and exports.
+Agents may overlap through the same attached MCP connection when each has its own open file. Keep one writer per editable document, including across pages. If two agents need to edit the same file, sequence their work or use separate working files and let the design owner integrate the accepted changes.
+
+Keep batches focused. FigCraft queues commands on its UI thread, so a long batch can delay other clients. If a call fails or times out, re-inspect the same explicit document before retrying a write because the app may already have applied it. Use the allowed project folder for saves and exports.
 
 Keep one editable canvas file for the issue. Save edits there and use named pages for alternatives or meaningful working versions. During ordinary collaboration, point to the live page or frame. Use zero attachments and save edits to the existing file. Skip frozen copies, PNG exports, galleries, and version uploads after routine edits. For a specific visual question, attach at most one focused crop when the live canvas reference is insufficient, or provide the visual the collaborator explicitly requests. Internal inspection is separate from publishing. Use targeted inspection and batch related edits where practical.
 

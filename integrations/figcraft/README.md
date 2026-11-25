@@ -17,6 +17,15 @@ Use FigCraft for live canvas work when a Shape issue selects it. The [Shape work
 
 Use one controlled document or clearly identified tab per issue. Save to `artifacts/<issue-id>/design/` and target the document by ID on tool calls, so a tab change or another issue's run does not redirect edits. Keep one agent writer per editable document. For a shared prototype, keep the canonical file with its owning issue and link to that exact revision from contributing issues. See the [project directory rules](../../workflows/project-directories.md#prototypes-shared-across-issues). If the app is closed or the intended document is unavailable, report that in the issue and wait for the collaborator to open it before attempting live edits.
 
+## Concurrent agent work
+
+The attached FigCraft 0.18.1 control channel accepts several clients and queues their commands on the app’s UI thread. Two Multica runs can overlap through one workspace MCP entry when each writer has its own open file. A long batch can delay another run’s commands. Keep the app’s project-folder restrictions in place for this setup. [FigCraft control protocol](https://github.com/storytold/figcraft/blob/v0.18.1/docs/control-protocol.md)
+
+1. Give each agent a distinct editable file under the owning issue’s design folder and keep both files open in the controlled app. Record the exact file and writing owner on each issue.
+2. Have each agent confirm its file and pass the explicit `document` ID or open file path on supported calls, particularly edits, exports, and saves. Calls without a document target can follow the front tab. If a required operation uses the front tab, coordinate exclusive app use for that operation. [FigCraft document targeting](https://github.com/storytold/figcraft/blob/v0.18.1/docs/mcp.md#naming-the-document)
+3. Keep one writer per editable file. Named pages organize work within a file and do not isolate writers. For work on one file, schedule turns or use separate working files and let the owning designer integrate accepted changes.
+4. Keep command batches focused. After a timeout, re-inspect the explicit target before retrying, since the previous write may already have landed.
+
 ## Multica wiring
 
 Add `figcraft-synthesis` in **Workspace Settings → MCP** using the stdio configuration above. Assign the workspace MCP entry and FigCraft tooling skill only to Product & Design. Follow the [workspace library rules](../multica/README.md#workspace-skills-and-mcp-servers) to remove a duplicate after verifying the library assignment.
