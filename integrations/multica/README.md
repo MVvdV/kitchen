@@ -6,7 +6,7 @@ Use this guide to apply the [workflow](../../workflows/README.md) in Multica. Re
 
 Apply the [agent roster and peer dispatch rules](agent-setup.md). Give each role its instructions and the shared instructions. Keep Todo, In Delivery, and Blocked without automatic handlers. Shape and Build use an explicit assignee. Set a retry or periodic recovery check only after choosing a compatible independent runtime and verifying permissions. Use work started by Mike to observe behavior.
 
-Use an on-demand squad mention for the Debate Council. A guest council posts findings while the current assignee owns the transition.
+Use an on-demand squad mention for Council. A guest council posts findings while the current assignee owns the transition.
 
 ## Workspace skills and MCP servers
 

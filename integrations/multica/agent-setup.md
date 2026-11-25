@@ -4,25 +4,23 @@ The [team rules](../../governance/team-organisation.md) define portable roles, a
 
 | Multica agent | Runtime | Model | Reasoning | Role |
 | --- | --- | --- | --- | --- |
-| Engineer I | Codex | `gpt-6.2-sol` | Medium | Build owner and engineering peer reviewer |
-| Engineer II | Claude Code | `claude-opus-5-5` | Medium | Build owner and engineering peer reviewer |
-| Product & Design II | Claude Code | `claude-opus-5-5` | Medium | Shape owner and design peer reviewer |
+| Engineer I | Codex | `gpt-6.2-sol` | Medium | Build owner and Council reviewer for architecture and implementation |
+| Engineer II | Claude Code | `claude-opus-5-5` | Medium | Build owner and Council reviewer for architecture and implementation |
+| Product & Design II | Claude Code | `claude-opus-5-5` | Medium | Shape owner and Council reviewer for product and design |
 | Product & Design I | Codex | `gpt-6.1-terra` | High | Shape owner, design peer reviewer, and Council visual critic |
 | Delivery | Codex | `gpt-6.2-sol` | High | Planning, reconciliation, dispatch, and recovery |
 | Release | Codex | `gpt-6.2-sol` | Medium | Prepare, publish, and verify approved releases |
 | Chairman | Claude Code | `claude-opus-5-5` | High | Council leader and independent Verification |
-| Product Critic | Claude Code | `claude-opus-5-5` | Medium | Council product perspective |
-| Architecture Critic | Codex | `gpt-6.2-sol` | High | Council architecture perspective |
 | Analysis Assistant | Codex | `gpt-6-luna` | High | Bounded evidence analysis |
 | Operations Assistant | Claude Code | `claude-haiku-5-5` | Medium | Bounded operational evidence collection |
 
 ## Skills and tools
 
-Give both designers the same Shape, prototype, and FigCraft skills. Give both engineers the same Build and delegation skills. Bind `peer-review` to both pairs and to Chairman, Product Critic, and Architecture Critic. The assistants use the portable [evidence report](../../templates/evidence-report.md) format.
+Give both designers the same Shape, prototype, and FigCraft skills. Give both engineers the same Build and delegation skills. Bind `peer-review` to both pairs and Chairman. Give Chairman `review-options` for convening reviews and synthesizing findings. The assistants use the portable [evidence report](../../templates/evidence-report.md) format.
 
 Assign both designers the workspace-managed FigCraft MCP entry for the project. In SynThesis, the entry is `figcraft-synthesis`. Keep its registration and assignments in Multica. Verify the saved runtime, model, reasoning, visibility, skill bindings, and workspace MCP assignment before the human starts the first real issue. For projects with different design resources, use their own configured entry and check the active project's resource before editing.
 
-Use the existing Council squad. Add Visual Critic to the roster. Keep engineering peers available for explicit invitations. Record consequential review requests on the issue and link the same revision for every reviewer. Council holds advisory authority. Chairman leaves the ticket with its owner while Council reviews it.
+Use the existing Council squad with Chairman as leader and both designers and both engineers as members. Give each member the review role listed above. Chairman invites the relevant peers for each question and can mention either assistant separately for evidence. A Council mention reaches Chairman, who chooses reviewers. Record the question and exact revision on the issue. Chairman leaves the ticket with its owner while Council reviews it.
 
 ## Dispatch
 

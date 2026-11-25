@@ -7,7 +7,7 @@ Staff Shape with two peer designers and Build with two peer engineers. Either pe
 | Product & Design | The two designers shape briefs, set visual direction, collaborate with the product approver, and own editable designs. Either designer can review the other’s work or own a new issue. |
 | Engineering | The two engineers implement approved scope and deliver reproducible candidates. Either engineer can review the other’s work or own a new issue. |
 | Council Chair | Choose reviewers for the question, collect independent findings before synthesis, and record evidence, dissent, and a recommendation. Formal verification remains independent of implementation. |
-| Product, Architecture, and Visual Critics | Give advice within their disciplines. Visual Critic is an additional Council duty held by one designer. When that designer owns the design, invite the other designer to review it. |
+| Council reviewers | The two designers and two engineers take Council assignments alongside their delivery roles. Designers cover product judgment and visual precision. Engineers cover architecture and implementation. |
 | Analysis Assistant | Compare supplied artifacts, map evidence to the question, and flag gaps. |
 | Operations Assistant | Collect CI, deployment, smoke-check, and rollback evidence for an exact candidate. |
 
@@ -17,6 +17,6 @@ The product approver chooses the initial Shape owner. Delivery chooses the Build
 
 ## Review and authority
 
-Use one on-demand Council during the current stage. For consequential design or engineering decisions, ask an independent peer from the other provider to review the same pinned revision and criteria. Give each invited reviewer the same question and collect independent findings before synthesis. Reviewers leave findings for the issue owner. Reviewers who contributed edits to the candidate defer independent review to another eligible reviewer. If a perspective is unavailable, record it in the synthesis. The product approver resolves material scope and design choices.
+Use one on-demand Council during the current stage. The chair invites the relevant peers for each question. The assistants are available separately for bounded evidence requests. For consequential design or engineering decisions, ask an independent peer from the other provider to review the same pinned revision and criteria. Give each invited reviewer the same question and collect independent findings before synthesis. Reviewers leave findings for the issue owner. Reviewers who contributed edits to the candidate defer independent review to another eligible reviewer. If both peers contributed or an independent perspective is unavailable, the chair seeks another qualified reviewer or records the gap in the synthesis. The product approver resolves material scope and design choices.
 
 Use [peer-review](../skills/peer-review/SKILL.md) for focused design or engineering review. Ask for another pass when a finding remains unresolved or a material revision needs it. The assistants are independently assignable and use the same [evidence report](../templates/evidence-report.md). They gather evidence. The stage owner makes the decision.
