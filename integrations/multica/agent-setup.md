@@ -26,7 +26,7 @@ Use the existing Council squad. Add Visual Critic to the roster. Keep engineerin
 
 ## Dispatch
 
-Multica workflow handoffs select one fixed destination. Set Shape and Build to **No handoff** so their columns can accept either peer. Keep the review and next-step guidance and preserve the project's approval gates. Moving into either column now retains the current assignee and starts no run by itself.
+Multica workflow handoffs select one fixed destination. Set Shape and Build to **No handoff** so their columns can accept either peer. Store the Shape and Build guidance in both peer agents’ instructions because Multica clears the handoff instructions when the handler is removed. Preserve each project’s approval gates. Moving into either column now retains the current assignee and starts no run by itself.
 
 - **Shape** Mike moves the issue to Shape, then assigns either designer and starts the run. For a reviewer on an existing Shape ticket, mention the chosen peer with the review question and exact revision. The assignee continues to own the ticket.
 - **Build** Delivery records a chosen engineer and the planned revision before dispatch. Verify the item is eligible, move it to Build, and explicitly assign the selected engineer to start work. Apply this procedure to self-contained tickets and each eligible child in a wave.
