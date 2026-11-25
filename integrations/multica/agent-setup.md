@@ -4,10 +4,10 @@ The [team rules](../../governance/team-organisation.md) define portable roles, a
 
 | Multica agent | Runtime | Model | Reasoning | Role |
 | --- | --- | --- | --- | --- |
-| Engineering | Codex | `gpt-6.2-sol` | Medium | Build owner and engineering peer reviewer |
-| Engineer · Claude | Claude Code | `claude-opus-5-5` | Medium | Build owner and engineering peer reviewer |
-| Product & Design | Claude Code | `claude-opus-5-5` | Medium | Shape owner and design peer reviewer |
-| Product & Design · Visual Critic | Codex | `gpt-6.1-terra` | High | Shape owner, design peer reviewer, and Council visual critic |
+| Engineer I | Codex | `gpt-6.2-sol` | Medium | Build owner and engineering peer reviewer |
+| Engineer II | Claude Code | `claude-opus-5-5` | Medium | Build owner and engineering peer reviewer |
+| Product & Design II | Claude Code | `claude-opus-5-5` | Medium | Shape owner and design peer reviewer |
+| Product & Design I | Codex | `gpt-6.1-terra` | High | Shape owner, design peer reviewer, and Council visual critic |
 | Delivery | Codex | `gpt-6.2-sol` | High | Planning, reconciliation, dispatch, and recovery |
 | Release | Codex | `gpt-6.2-sol` | Medium | Prepare, publish, and verify approved releases |
 | Chairman | Claude Code | `claude-opus-5-5` | High | Council leader and independent Verification |
