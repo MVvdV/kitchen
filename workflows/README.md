@@ -1,6 +1,6 @@
 # Kitchen Brigade workflow
 
-Product projects use this delivery board. Mike creates the first issue in Todo and initiates Shape. Council is an optional advisory review during a stage. Kitchen’s [blueprint improvement process](../governance/blueprint-improvement.md) uses evidence from those product projects.
+Product projects use this delivery board. Select one eligible design or engineering peer per issue as described in the [team rules](../governance/team-organisation.md). Mike creates the first issue in Todo and initiates Shape. Council is an optional advisory review during a stage. Kitchen’s [blueprint improvement process](../governance/blueprint-improvement.md) uses evidence from those product projects.
 
 | Column | Intended handler | Exit |
 |---|---|---|

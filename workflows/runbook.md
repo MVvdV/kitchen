@@ -6,6 +6,10 @@ The parent owns the application outcome. Keep the Delivery Lead assigned through
 
 Group work into numbered stages. Work in the same stage can start independently. Record all children unassigned in Todo before dispatching eligible first-wave work to Build. When a stage closes, check the actual outcomes and dependencies before promoting the next wave. A cancelled required child needs a recorded scope decision before advancing.
 
+## Select a Shape or Build owner
+
+The product approver selects either designer when initiating Shape. Delivery selects either engineer when dispatching Build. Prefer continuity on returns, and choose the other peer if the previous owner cannot continue. Record the intended owner and checkpoint, then use the project integration to dispatch explicitly. Reread the issue and active attempts before retrying a partial handoff. See [team organisation](../governance/team-organisation.md).
+
 ## Reconcile existing work before dispatch
 
 After design approval, Delivery compares the approved revision with the affected existing tickets, dependencies, in-flight work, built changes, and unreleased candidates in the project. Include related work outside the current issue's children when it depends on the same product assumptions. Record each affected ticket and candidate revision with its evidence, disposition, downstream changes, owner, and next step. Record the scope checked if there is no affected work. Finish the reconciliation before creating or dispatching new work.

@@ -1,17 +1,22 @@
 # Team organisation
 
-Use one Council for independent review. Bring in reviewers with the right expertise for the question and assign follow-up work to the role that owns it. Keep the person who approves the design able to choose between materially different outcomes.
+Staff Shape with two peer designers and Build with two peer engineers. Either peer can own a ticket from the start and carries the full responsibilities of the role. Select the owner based on continuity, availability, and the work at hand. Give the peers different model providers when compatible runtimes are available.
 
 | Role | Responsibility |
 | --- | --- |
-| Product & Design | Own the Shape issue and editable design. Define the review criteria with the product approver, apply agreed changes, and publish the exact revised candidate. |
-| Visual Critic | Independently review an exact revision for visual hierarchy, typography and spacing, alignment, component and state consistency, contrast, and responsive layout. Point to the affected frame or state and explain the expected correction. |
-| Alternate Designer | Take over an explicitly handed-off Shape issue or give an independent design review. When taking over, work from the recorded revision, decisions, and open questions. Keep one agent writer per editable file. |
-| Engineering and Alternate Engineer | Use one implementation owner at a time. The alternate can take over from an exact commit and test checkpoint or review a colleague's implementation. Use isolated worktrees and let Verification assess the candidate independently. |
-| Council Chair | Select relevant reviewers, reconcile findings, record dissent, and make a recommendation. For a visual review, invite Visual Critic and add product or architecture perspectives where they affect the design. |
+| Product & Design | The two designers shape briefs, set visual direction, collaborate with the product approver, and own editable designs. Either designer can review the other’s work or own a new issue. |
+| Engineering | The two engineers implement approved scope and deliver reproducible candidates. Either engineer can review the other’s work or own a new issue. |
+| Council Chair | Choose reviewers for the question, collect independent findings before synthesis, and record evidence, dissent, and a recommendation. Formal verification remains independent of implementation. |
+| Product, Architecture, and Visual Critics | Give advice within their disciplines. Visual Critic is an additional Council duty held by one designer. When that designer owns the design, invite the other designer to review it. |
+| Analysis Assistant | Compare supplied artifacts, map evidence to the question, and flag gaps. |
+| Operations Assistant | Collect CI, deployment, smoke-check, and rollback evidence for an exact candidate. |
 
-For a design review loop, pin the design revision and the visible criteria. Council reports concrete findings against that revision. Product & Design resolves findings within the existing direction and posts the next revision. Ask for another focused review only when an unresolved finding or a changed design needs it. Keep the issue in Shape until the product approver is satisfied. A consequential choice about the product experience goes to the approver with options and trade-offs.
+## Ownership and handoffs
 
-Use an alternate when capacity, continuity, or independence requires one. Before transferring write ownership, confirm the previous run is stopped and record the current revision, completed checks, remaining work, and next owner. Reviewers can work independently from frozen snapshots. The Council advises and the designated owner applies changes.
+The product approver chooses the initial Shape owner. Delivery chooses the Build owner once approved scope and dependencies are ready. When returning work for revision, use the previous stage owner if available and select their peer when recovery needs it. Keep one issue owner and one writer for an editable design or implementation. Before transferring ownership, confirm the prior run has stopped and record the exact artifact or commit, completed checks, unfinished work, and next owner. If neither peer is available, leave the recorded checkpoint and use the workflow recovery process.
 
-Start with a Visual Critic in the existing Council and keep the alternate roles available for deliberate handoffs. Consider a separate Design Council only if recurring reviews need a distinct roster or cadence.
+## Review and authority
+
+Use one on-demand Council during the current stage. For consequential design or engineering decisions, ask an independent peer from the other provider to review the same pinned revision and criteria. Give each invited reviewer the same question and collect independent findings before synthesis. Reviewers leave findings for the issue owner. Reviewers who contributed edits to the candidate defer independent review to another eligible reviewer. If a perspective is unavailable, record it in the synthesis. The product approver resolves material scope and design choices.
+
+Use [peer-review](../skills/peer-review/SKILL.md) for focused design or engineering review. Ask for another pass when a finding remains unresolved or a material revision needs it. The assistants are independently assignable and use the same [evidence report](../templates/evidence-report.md). They gather evidence. The stage owner makes the decision.

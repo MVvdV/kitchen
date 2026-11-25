@@ -25,7 +25,8 @@
       "targets": [
         "plan_delivery",
         "blocked"
-      ]
+      ],
+      "owner_selection": "explicit"
     },
     {
       "key": "plan_delivery",
@@ -58,7 +59,8 @@
         "verify",
         "shape",
         "blocked"
-      ]
+      ],
+      "owner_selection": "explicit"
     },
     {
       "key": "verify",
