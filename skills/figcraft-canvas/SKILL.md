@@ -9,4 +9,6 @@ Use the assigned local FigCraft MCP connection when the issue identifies FigCraf
 
 Use semantic layer tools, and keep each change small enough to inspect together. If an attached call times out, inspect the document before retrying because the app may already have applied it. Use the allowed project folder for saves and exports.
 
-For review, save a named, versioned native snapshot and export the relevant frames. Record the exact revision, design decision, and open questions on the issue with tool-independent previews. Use the Shape workflow to request review and approval. Keep prototypes local and share review artifacts in the issue.
+Keep one editable canvas file for the issue. Save edits there and use named pages for alternatives or meaningful working versions. During ordinary collaboration, point to the page or frame. Export and share a focused crop only when it makes the specific design detail under discussion easier to understand. Use targeted inspection and batch related edits where practical.
+
+At a formal handoff, save one frozen native snapshot, the minimum tool-independent preview needed to review it, and decision notes. Link the exact packet on the issue. Reuse it if the revision is unchanged. The Shape owner publishes the approval packet as soon as the material design choices are settled and the design is ready.

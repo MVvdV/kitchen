@@ -23,6 +23,6 @@ Add `figcraft-synthesis` in **Workspace Settings → MCP** using the stdio confi
 
 ## Hand off a design revision
 
-Keep editable working files in `artifacts/<issue-id>/design/`. Keep snapshots, PNG or PDF previews, and decision notes in `artifacts/<issue-id>/review/` with a revision in the name. Attach the preview and notes to the issue, with the native snapshot when another session needs to reopen it. Use the issue artifact or another accessible versioned reference when approval must identify exactly what was reviewed. Keep exploratory files out of the product repository's published history.
+Keep one editable FigCraft file in `artifacts/<issue-id>/design/`. Use named pages for alternatives or meaningful working versions and refer to those pages in conversation. Share a crop or focused export when the discussion depends on a specific visual detail. For a formal handoff, save one frozen native snapshot, a focused tool-independent preview, and decision notes in `artifacts/<issue-id>/review/`. Link the exact packet on the issue. Use the issue artifact or another accessible versioned reference when approval must identify exactly what was reviewed. Keep exploratory files out of the product repository's published history.
 
 Mike approves the revision by moving the issue to Plan Delivery. Delivery should be able to read the review packet without signing into a particular design tool.

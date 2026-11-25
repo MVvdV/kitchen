@@ -24,6 +24,14 @@ Record an unresolved reconciliation hold on an affected release issue. A candida
 
 The approved design is enough for Delivery to reconcile and dispatch work within its scope. Ask the product approver about a material scope change or an unresolved product trade-off. Record the reason and return that decision to Shape before dispatching affected work. One design approval can cover several revised tickets.
 
+## Discussion, iteration, and handoff
+
+Use the working artifact during collaboration. Keep replies focused on the answer, relevant change, and next decision. Share only the visual or log excerpt needed to explain a specific question. Save material decisions or a restart checkpoint in the existing working record.
+
+Shape publishes one frozen approval candidate when all material choices are resolved and it is ready for approval. Use a pinned revision for a formal peer review or ownership transfer when the recipient needs it. Update the working design between handoffs and reuse the published packet while its revision is current. Mark an outdated packet superseded if a material change invalidates it.
+
+Build uses an isolated checkout and the issue branch. Use local commits and a compact checkpoint for recovery. At Verify, identify the exact candidate, provide the relevant check results and reproduction commands, and link evidence. Routine replies and implementation steps do not create new packets. Release preparation uses the verified revision and the existing release approval process.
+
 ## Checkouts and handoffs
 
 Follow the [project directory rules](project-directories.md) for checkouts, local files, prototypes, and cross-tool handoffs. Save versioned work as local commits and share accessible evidence on the issue. Record the exact candidate before external publication. Include the commit SHA or pull request and candidate SHA so Verification can reproduce the result.
