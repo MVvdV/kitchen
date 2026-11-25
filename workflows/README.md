@@ -4,8 +4,8 @@ Product projects use this delivery board. Select one eligible design or engineer
 
 | Column | Intended handler | Exit |
 |---|---|---|
-| Todo | None | Mike sends intake to Shape. Park delivery slices here unassigned until Delivery moves eligible work to Build. |
-| Shape | Product & Design | Entering Shape starts collaboration. Keep the issue here through discussion and revisions. Set or reference the visual direction for UI work. Post one review-ready artifact revision when ready. Mike approves it by moving directly to Plan Delivery. |
+| Todo | None | Park intake and linked design follow-ups unassigned until Mike starts Shape. Park delivery slices unassigned until Delivery explicitly dispatches eligible work to Build. |
+| Shape | Product & Design | Mike moves the issue here and assigns a designer to start collaboration. Keep discussion and edits in the working design. Reconcile related Shape and Todo issues and create linked design follow-ups where useful. Publish one frozen approval candidate when ready. Mike approves it by moving directly to Plan Delivery. |
 | Plan Delivery | Delivery Lead | Verify Mike’s move from Shape and record the approved revision before planning. Explain missing or stale approval and return to Shape before dispatching. Reconcile affected existing tickets and unreleased candidates before creating or dispatching work. Gate UI work on an [approved visual direction](runbook.md#visual-direction-before-build). Send a self-contained issue to Build or publish a split plan and move the parent to In Delivery. |
 | In Delivery | None, retain Delivery Lead | Advance eligible waves on native wakeups. Send the final candidate to Prepare Release or close work that needs no release. |
 | Build | Engineering | Confirm the approved visual direction before UI implementation. Post evidence and hand off to Verify. Return material scope changes to Shape. |

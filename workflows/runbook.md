@@ -10,6 +10,16 @@ Group work into numbered stages. Work in the same stage can start independently.
 
 The product approver selects either designer when initiating Shape. Delivery selects either engineer when dispatching Build. Prefer continuity on returns, and choose the other peer if the previous owner cannot continue. Record the intended owner and checkpoint, then use the project integration to dispatch explicitly. Reread the issue and active attempts before retrying a partial handoff. See [team organisation](../governance/team-organisation.md).
 
+## Split and reconcile work during Shape
+
+Keep decisions in the current Shape issue when they can be resolved in its normal discussion. Create a follow-up when the question has its own outcome and can be shaped and reviewed separately. First check related Shape and Todo issues for overlap, including earlier follow-ups. Reuse an applicable issue. If none fits, create one linked design issue in Todo, unassigned. Link both directions and record the source design, inherited decisions, the follow-up’s boundary, draft acceptance criteria, and whether the source depends on its answer. A design follow-up can be linked independently of the delivery hierarchy.
+
+The product approver selects when the follow-up starts and who owns it. The default is manual start. A project may explicitly authorize the workflow to move and assign eligible follow-ups into Shape later. Starting design carries no authority to approve it or dispatch implementation.
+
+If the follow-up owns a material decision needed for the source approval, hold the affected approval until that decision is resolved. Continue unaffected shaping. When either issue changes a shared assumption, state the impact and link both issues. Update parked Todo drafts for settled decisions within scope. Record proposed changes as proposals. If another owner is actively shaping the affected issue, record the impact for that owner to reconcile instead of editing their design, reassigning it, or starting a run. Preserve traceability if a follow-up is superseded.
+
+Plan Delivery performs the wider reconciliation after approval. It can reuse suitable existing work and creates Build slices when approved scope needs them. A linked Shape issue does not become a staged delivery child by default.
+
 ## Reconcile existing work before dispatch
 
 After design approval, Delivery compares the approved revision with the affected existing tickets, dependencies, in-flight work, built changes, and unreleased candidates in the project. Include related work outside the current issue's children when it depends on the same product assumptions. Record each affected ticket and candidate revision with its evidence, disposition, downstream changes, owner, and next step. Record the scope checked if there is no affected work. Finish the reconciliation before creating or dispatching new work.
@@ -26,7 +36,7 @@ The approved design is enough for Delivery to reconcile and dispatch work within
 
 ## Discussion, iteration, and handoff
 
-Use the working artifact during collaboration. Keep replies focused on the answer, relevant change, and next decision. Share only the visual or log excerpt needed to explain a specific question. Save material decisions or a restart checkpoint in the existing working record.
+Use the working artifact during collaboration. Keep replies focused on the answer, relevant change, and next decision. For routine design discussion and canvas edits, default to zero attachments and refer to the live page or frame. Share a single focused visual when a specific question depends on it and pointing to the canvas is insufficient. For engineering updates, link only the log or excerpt needed for the question. Save material decisions or a restart checkpoint in the existing working record.
 
 Shape publishes one frozen approval candidate when all material choices are resolved and it is ready for approval. Use a pinned revision for a formal peer review or ownership transfer when the recipient needs it. Update the working design between handoffs and reuse the published packet while its revision is current. Mark an outdated packet superseded if a material change invalidates it.
 
