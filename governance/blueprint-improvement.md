@@ -2,6 +2,8 @@
 
 Kitchen maintains the shared delivery blueprint by evaluating work done in product projects. Product projects run Kitchen Brigade on real work and provide the evidence. Kitchen issues are for learning, evaluating, proposing improvements, and tracking their rollout. Product implementation and product-specific fixes stay with the product project.
 
+The [Chief of Staff](../agents/chief-of-staff.md) coordinates this work with Mike. Use Kitchen issues to track shared improvements and product project issues to track project-specific setup or fixes. The Operations Assistant can collect evidence or compare an applied configuration with the intended rollout. Delivery continues to own execution inside each product project.
+
 ## Capture and evaluate
 
 Open a linked improvement issue in Kitchen when a product run exposes a potential weakness in the shared workflow, agent instructions, skills, or templates. Record:
@@ -21,7 +23,7 @@ Propose the smallest generally applicable change in this repository. Link the pr
 
 Before approving a blueprint change, record whether it affects instructions agents receive at runtime. For Multica changes, complete the [runtime compatibility check](../integrations/multica/README.md#runtime-compatibility-check) and record the result on the Kitchen issue. Resolve any conflict that would change what an agent does before rolling out the affected change.
 
-Record approval and the Git revision before updating live shared workflow, agent, or skill settings. A change to shared settings reaches every project using them. If the change warrants a limited rollout, first apply it to one real project using separate configuration where needed. Record the affected projects and the revision applied, then use subsequent product runs to check the result. Record whether the evidence supports keeping, revising, or rolling back the change.
+Record approval and the Git revision before updating live shared workflow, agent, or skill settings. A change to shared settings reaches every project using them. If the change warrants a limited rollout, first apply it to one real project using separate configuration where needed. Use the [rollout record](../templates/blueprint-rollout.md) to record approval, affected projects, intended settings, and the revision applied, then use subsequent product runs to check the result. Record whether the evidence supports keeping, revising, or rolling back the change.
 
 ## Proposed Kitchen board
 

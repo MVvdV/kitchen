@@ -9,7 +9,12 @@ Staff Shape with two peer designers and Build with two peer engineers. Either pe
 | Council Chair | Choose reviewers for the question, collect independent findings before synthesis, and record evidence, dissent, and a recommendation. Formal verification remains independent of implementation. |
 | Council reviewers | The two designers and two engineers take Council assignments alongside their delivery roles. Designers cover product judgment and visual precision. Engineers cover architecture and implementation. |
 | Analysis Assistant | Compare supplied artifacts, map evidence to the question, and flag gaps. |
-| Operations Assistant | Collect CI, deployment, smoke-check, and rollback evidence for an exact candidate. |
+| Chief of Staff | Coordinate setup and approved changes across projects. Maintain the blueprint improvement and rollout records. |
+| Operations Assistant | Collect operational evidence for an exact candidate or compare saved project settings with an approved setup when asked. |
+
+## Agent names
+
+Default display names describe the professional role. Use role names in the portable blueprint, instructions, and templates. Record display names only where a specific tool setup needs them. Resolve live links and bindings by stable IDs so later renames can leave those bindings intact.
 
 ## Ownership and handoffs
 

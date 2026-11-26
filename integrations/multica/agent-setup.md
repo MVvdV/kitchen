@@ -8,11 +8,12 @@ The [team rules](../../governance/team-organisation.md) define portable roles, a
 | Engineer II | Claude Code | `claude-opus-5-5` | Medium | Build owner and Council reviewer for architecture and implementation |
 | Product & Design II | Claude Code | `claude-opus-5-5` | Medium | Shape owner and Council reviewer for product and design |
 | Product & Design I | Codex | `gpt-6.1-terra` | High | Shape owner, design peer reviewer, and Council visual critic |
+| Chief of Staff | Codex | `gpt-6.2-sol` | Medium | Cross-project setup, blueprint governance, and approved rollout |
 | Delivery | Codex | `gpt-6.2-sol` | High | Planning, reconciliation, dispatch, and recovery |
 | Release | Codex | `gpt-6.2-sol` | Medium | Prepare, publish, and verify approved releases |
 | Chairman | Claude Code | `claude-opus-5-5` | High | Council leader and independent Verification |
 | Analysis Assistant | Codex | `gpt-6-luna` | High | Bounded evidence analysis |
-| Operations Assistant | Claude Code | `claude-haiku-5-5` | Medium | Bounded operational evidence collection |
+| Operations Assistant | Claude Code | `claude-haiku-5-5` | Medium | Bounded operational evidence and configuration checks |
 
 ## Skills and tools
 
@@ -21,6 +22,12 @@ Give both designers the same Shape, prototype, and FigCraft skills. Give both en
 Assign both designers the workspace-managed FigCraft MCP entry for the project. In SynThesis, the entry is `figcraft-synthesis`. Keep its registration and assignments in Multica. Verify the saved runtime, model, reasoning, visibility, skill bindings, and workspace MCP assignment before the human starts the first real issue. For projects with different design resources, use their own configured entry and check the active project's resource before editing. Onboard new FigCraft agents with the [concurrent work rules](../figcraft/README.md#concurrent-agent-work). Assign a distinct open file to each simultaneous writer and require explicit document targeting.
 
 Use the existing Council squad with Chairman as leader and both designers and both engineers as members. Give each member the review role listed above. Chairman invites the relevant peers for each question and can mention either assistant separately for evidence. A Council mention reaches Chairman, who chooses reviewers. Record the question and exact revision on the issue. Chairman leaves the ticket with its owner while Council reviews it.
+
+## Cross-project operations
+
+Bind the [Chief of Staff](../../agents/chief-of-staff.md) role to one workspace agent and use its stable agent ID for integrations that need a binding. Use a Kitchen issue to record shared decisions and rollout evidence. For each affected project, record the effective workflow, relevant role and skill bindings, project variations, and blueprint revision as appropriate to the change. Compare live rules and runtime instructions with the approved blueprint before rollout.
+
+Mike initiates work or explicitly delegates configuration changes through an operations issue. The Operations Assistant can compare saved settings with the approved record and report gaps. Keep established project stage ownership and approvals in place. A schedule or automatic rollout requires a separately approved scope.
 
 ## Dispatch
 
