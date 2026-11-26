@@ -29,6 +29,12 @@ Bind the [Chief of Staff](../../agents/chief-of-staff.md) role to one workspace 
 
 Mike initiates work or explicitly delegates configuration changes through an operations issue. The Operations Assistant can compare saved settings with the approved record and report gaps. Keep established project stage ownership and approvals in place. A schedule or automatic rollout requires a separately approved scope.
 
+## Shape decision record
+
+For a substantial Shape issue, maintain a short decision section in the issue description. Use a targeted description edit to preserve other edits. Record settled choices and evidence, open decisions, linked follow-ups and dependencies, and the live canvas reference. Update the section at meaningful checkpoints. Keep exploratory conversation in replies and use a separate linked Todo issue when a question needs its own shaping.
+
+The frozen handoff identifies what the approval covers separately from the exploratory record. Delivery reconciles affected work and plans implementation from that scope.
+
 ## Dispatch
 
 Multica workflow handoffs select one fixed destination. Set Shape and Build to **No handoff** so their columns can accept either peer. Store the Shape and Build guidance in both peer agents’ instructions because Multica clears the handoff instructions when the handler is removed. Preserve each project’s approval gates. Moving into either column now retains the current assignee and starts no run by itself.

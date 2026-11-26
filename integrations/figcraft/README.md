@@ -30,6 +30,10 @@ The attached FigCraft 0.18.1 control channel accepts several clients and queues 
 
 Add `figcraft-synthesis` in **Workspace Settings → MCP** using the stdio configuration above. Assign the workspace MCP entry and FigCraft tooling skill only to Product & Design. Follow the [workspace library rules](../multica/README.md#workspace-skills-and-mcp-servers) to remove a duplicate after verifying the library assignment.
 
+## Run a small design experiment
+
+Use a clearly named page or frame in the working canvas for a tightly coupled experiment. Compare a small number of visual variants side by side, or use a short clickable sequence for an interaction question. Point the collaborator to the page or frame and record the result on the issue. Use a separate issue and file when the experiment needs a separate owner or review.
+
 ## Hand off a design revision
 
 Keep one editable FigCraft file in `artifacts/<issue-id>/design/`. Use named pages for alternatives or meaningful working versions and refer to those pages in conversation. Keep routine replies attachment-free and refer to the page or frame. Share one focused crop when that specific question depends on it and the canvas reference is insufficient. Skip saved copies and review exports during ordinary edits. For a formal handoff, save one frozen native snapshot, a focused tool-independent preview, and decision notes in `artifacts/<issue-id>/review/`. Link the exact packet on the issue. Use the issue artifact or another accessible versioned reference when approval must identify exactly what was reviewed. Keep exploratory files out of the product repository's published history.

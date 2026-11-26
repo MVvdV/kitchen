@@ -10,6 +10,14 @@ Group work into numbered stages. Work in the same stage can start independently.
 
 The product approver selects either designer when initiating Shape. Delivery selects either engineer when dispatching Build. Prefer continuity on returns, and choose the other peer if the previous owner cannot continue. Record the intended owner and checkpoint, then use the project integration to dispatch explicitly. Reread the issue and active attempts before retrying a partial handoff. See [team organisation](../governance/team-organisation.md).
 
+## Explore and decide within Shape
+
+A Shape issue can cover a coherent product or journey and contain several cycles of exploring options, testing, and deciding. Keep the work together while its decisions need to be seen in context. When a consequential uncertainty stays open and the available discussion or design cannot settle it, propose the smallest useful test. Name the decision it could change and stop when the evidence supports a choice or exposes what is still unknown.
+
+Keep a quick, tightly coupled experiment on the current issue. Use a linked follow-up when the work has a separate outcome and needs its own owner, time, or review. Apply the split and reconciliation rules below. Keep the larger reference design available while defining the scope that is ready for approval.
+
+Maintain one short, current decision record on the issue. Update it after a material decision or experiment outcome, a split, or a handoff. Include settled choices and their evidence, open decisions, linked follow-ups and any dependencies, and the current working design location. Keep routine discussion in the thread. A reviewer should be able to resume from the record and the relevant links.
+
 ## Split and reconcile work during Shape
 
 Keep decisions in the current Shape issue when they can be resolved in its normal discussion. Create a follow-up when the question has its own outcome and can be shaped and reviewed separately. First check related Shape and Todo issues for overlap, including earlier follow-ups. Reuse an applicable issue. If none fits, create one linked design issue in Todo, unassigned. Link both directions and record the source design, inherited decisions, the follow-up’s boundary, draft acceptance criteria, and whether the source depends on its answer. A design follow-up can be linked independently of the delivery hierarchy.
@@ -22,7 +30,7 @@ Plan Delivery performs the wider reconciliation after approval. It can reuse sui
 
 ## Reconcile existing work before dispatch
 
-After design approval, Delivery compares the approved revision with the affected existing tickets, dependencies, in-flight work, built changes, and unreleased candidates in the project. Include related work outside the current issue's children when it depends on the same product assumptions. Record each affected ticket and candidate revision with its evidence, disposition, downstream changes, owner, and next step. Record the scope checked if there is no affected work. Finish the reconciliation before creating or dispatching new work.
+Delivery reads the scope explicitly presented for approval. Treat explorations and deferred work as context and check their dependencies during reconciliation. If the scope boundary is ambiguous, ask before dispatch. After design approval, Delivery compares the approved revision with the affected existing tickets, dependencies, in-flight work, built changes, and unreleased candidates in the project. Include related work outside the current issue's children when it depends on the same product assumptions. Record each affected ticket and candidate revision with its evidence, disposition, downstream changes, owner, and next step. Record the scope checked if there is no affected work. Finish the reconciliation before creating or dispatching new work.
 
 | Disposition | Delivery action |
 | --- | --- |
@@ -38,7 +46,7 @@ The approved design is enough for Delivery to reconcile and dispatch work within
 
 Use the working artifact during collaboration. Keep replies focused on the answer, relevant change, and next decision. For routine design discussion and canvas edits, default to zero attachments and refer to the live page or frame. Share a single focused visual when a specific question depends on it and pointing to the canvas is insufficient. For engineering updates, link only the log or excerpt needed for the question. Save material decisions or a restart checkpoint in the existing working record.
 
-Shape publishes one frozen approval candidate when all material choices are resolved and it is ready for approval. Use a pinned revision for a formal peer review or ownership transfer when the recipient needs it. Update the working design between handoffs and reuse the published packet while its revision is current. Mark an outdated packet superseded if a material change invalidates it.
+Shape publishes one frozen approval candidate when material choices affecting the proposed delivery scope are resolved and that scope is ready for approval. The candidate states the scope ready for delivery, the explorations that informed it, and deferred work. Use a pinned revision for a formal peer review or ownership transfer when the recipient needs it. Update the working design between handoffs and reuse the published packet while its revision is current. Mark an outdated packet superseded if a material change invalidates it.
 
 Build uses an isolated checkout and the issue branch. Use local commits and a compact checkpoint for recovery. At Verify, identify the exact candidate, provide the relevant check results and reproduction commands, and link evidence. Routine replies and implementation steps do not create new packets. Release preparation uses the verified revision and the existing release approval process.
 
