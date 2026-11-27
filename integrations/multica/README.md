@@ -18,7 +18,7 @@ For a migration, register the workspace entry, assign it to the intended agents,
 
 ## Managed local checkouts
 
-Apply the [portable project directory rules](../../workflows/project-directories.md). Use the human checkout's visible `artifacts/` root for local working files and managed worktrees for versioned product work. Link revisioned review snapshots or runnable prototype bundles on the issue so other machines can retrieve them.
+Apply the [portable project directory rules](../../workflows/project-directories.md). Use the human checkout's visible `artifacts/` root for local working files and managed worktrees for versioned product work. Record project-relative paths and exact revisions on the issue for recipients who can reach the project folder. Use an existing shared link or the minimum attachment needed when the assigned runtime or reviewer cannot reach that path.
 
 Use **Worktree** mode for projects with concurrent local agent runs. Attach one clean Git checkout per project as the baseline on the machine running the Multica daemon. Keep the human checkout separate.
 
