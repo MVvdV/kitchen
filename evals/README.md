@@ -11,8 +11,8 @@ Use the scenarios below with the smallest set of linked artifacts a real run wou
 
 | Scenario | Inputs to provide | Passing outcome |
 | --- | --- | --- |
-| Human-owned intake | Unassigned Todo issue with a rough brief | Nothing starts until Mike sends it to Shape. Material ambiguity comes back as a focused question. |
-| Shape discussion | Return a design to Shape without revision instructions. Then Mike adds a note without a run trigger. | Product & Design asks what to change and ends its run in Shape. The note alone starts no run. |
+| Human-owned intake | Unassigned Todo issue with a rough brief | Nothing starts until the design approver sends it to Shape. Material ambiguity comes back as a focused question. |
+| Shape discussion | Return a design to Shape without revision instructions. Then the project collaborator adds a note without a run trigger. | Product & Design asks what to change and ends its run in Shape. The note alone starts no run. |
 | Agent-resolvable blocker | A blocked issue has a prerequisite that a named agent can handle. | The owner chooses the resolver and records the observable condition. As the resolver takes over, work leaves Blocked for the appropriate stage. The workflow preserves its approvals. |
 | Shape follow-up | A new independent design question overlaps a Todo draft and affects a decision in an active Shape issue | Reuse the draft, leave it unassigned, record the impact both ways, and hold the affected approval until the material decision is resolved. |
 | Large Shape issue | A product-wide canvas has settled, open, and deferred decisions across several cycles | A fresh designer can resume from one current decision record. The approval packet identifies only the scope ready for delivery. |
@@ -20,7 +20,7 @@ Use the scenarios below with the smallest set of linked artifacts a real run wou
 | Follow-up evidence changes the source | An independent experiment changes a shared assumption | The owners reconcile both issues and keep only the affected scope out of approval until settled. |
 | Prototype handoff access | A runnable prototype is available under the shared project folder, then a reviewer is assigned on another machine | First handoff gives the path, exact revision, and run steps without a ZIP. The remote reviewer receives an existing accessible link or the minimum bundle required. |
 | Live canvas iteration | A Shape turn with several canvas edits and an open material decision | Save to the existing canvas, return a brief page or frame reference with zero attachments, and publish one frozen packet only at the later formal handoff. |
-| Approval by transition | An authorized move from Shape to Plan Delivery after a review-ready revision is posted | Delivery records the transition and revision with no separate approval comment from Mike. |
+| Approval by transition | An authorized move from Shape to Plan Delivery after a review-ready revision is posted | Delivery records the transition and revision with no separate approval comment from the design approver. |
 | Missing or stale design approval | A move from another status, an ambiguous candidate, or a material revision change | Delivery posts the reason before returning the card to Shape. No work is dispatched. |
 | Visual direction before Build | An early visible prototype with no approved reference, a later-wave UI slice that inherits the approved project baseline, and a non-UI slice | The prototype stays out of Build while Shape resolves the direction. Delivery links the inherited revision on the later-wave slice before dispatch. The non-UI slice follows its normal criteria. Verify compares the rendered UI to the linked revision. |
 | Self-contained approval | One small approved change with acceptance examples | The original issue goes to Build with zero children. |

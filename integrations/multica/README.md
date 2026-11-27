@@ -4,7 +4,7 @@ Use this guide to apply the [workflow](../../workflows/README.md) in Multica. Re
 
 ## Wiring
 
-Apply the [agent roster and peer dispatch rules](agent-setup.md). Give each role its instructions and the shared instructions. Keep Todo, In Delivery, and Blocked without automatic handlers. Shape and Build use an explicit assignee. Set a retry or periodic recovery check only after choosing a compatible independent runtime and verifying permissions. Use work started by Mike to observe behavior.
+Apply the [agent roster and peer dispatch rules](agent-setup.md). Give each role its instructions and the shared instructions. Keep Todo, In Delivery, and Blocked without automatic handlers. Shape and Build use an explicit assignee. Set a retry or periodic recovery check only after choosing a compatible independent runtime and verifying permissions. Use work started by the project operator to observe behavior.
 
 Use an on-demand squad mention for Council. A guest council posts findings while the current assignee owns the transition.
 
@@ -36,13 +36,13 @@ Use the worktree Multica allocates. Keep disposable files in that worktree or a 
 
 ## GitHub publication
 
-Mike can sign in to GitHub CLI normally. Multica agents running under the same OS account may be able to use that login. GitHub login provides technical access. The workflow defines when agents have permission to use it for a write.
+The workspace operator can sign in to GitHub CLI normally. Multica agents running under the same OS account may be able to use that login. GitHub login provides technical access. The workflow defines when agents have permission to use it for a write.
 
 | Stage | Agreement |
 | --- | --- |
 | Shape through Prepare Release | Use local commits, tests, previews, and Multica evidence. GitHub reads and existing check status may be used. Keep project writes, including pushes, pull requests, tags, published releases, and review comments, for the approved publication. |
-| Ready for Release | Release moves the issue here after posting the complete packet. The column waits for Mike. |
-| Release & Verify | Mike moves the issue here from Ready for Release. Release checks the latest transition in the issue timeline and records its event ID and packet reference. It then publishes the approved candidate, verifies the published SHA, and records the results. A different candidate, destination, or set of GitHub actions needs fresh approval. |
+| Ready for Release | Release moves the issue here after posting the complete packet. The column waits for the release approver. |
+| Release & Verify | The release approver moves the issue here from Ready for Release. Release checks the latest transition in the issue timeline and records its event ID and packet reference. It then publishes the approved candidate, verifies the published SHA, and records the results. A different candidate, destination, or set of GitHub actions needs fresh approval. |
 
 Local commits use the configured human Git identity. Omit automated co-author trailers, provider bylines, and session links from commits and publication text. For Claude Code, set `attribution.commit` and `attribution.pr` to empty strings and `attribution.sessionUrl` to false in the effective settings. Apply the same publication audit across all runtimes. Check read access, the intended account's write permission, and availability of the Git credential path during Prepare Release without attempting a write. A GitHub CLI login can authenticate a release push through its credential helper for the release command.
 
@@ -50,7 +50,7 @@ Wire Prepare Release to the Release agent and set its next status to Ready for R
 
 ## Column order
 
-The workflow omits Backlog and uses the built-in Todo column for intake and parked work. Leave those issues unassigned. Move intake to Shape when Mike is ready and assign the chosen designer. Separate entry to Build from explicit engineer assignment as described in the [dispatch instructions](agent-setup.md#dispatch).
+The workflow omits Backlog and uses the built-in Todo column for intake and parked work. Leave those issues unassigned. Move intake to Shape when the design approver is ready and assign the chosen designer. Separate entry to Build from explicit engineer assignment as described in the [dispatch instructions](agent-setup.md#dispatch).
 
 ## Design handoff
 

@@ -4,4 +4,4 @@ Read README.md for the repository layout. For delivery behavior, read workflows/
 
 Keep workflows, skills, and templates independent of integration mechanics. Put platform setup and platform-specific procedures under integrations/. Keep the workflow blueprint, handbook, and relevant scenario aligned when changing a transition.
 
-Run `python3 scripts/check_repo.py` for offline validation. The scenarios in evals/README.md require a separate observation of actual behavior. Mike starts the first issue and owns design and release approval.
+Run `python3 scripts/check_repo.py` for offline validation. The scenarios in evals/README.md require a separate observation of actual behavior. The project setup identifies who starts work and owns design and release approval.

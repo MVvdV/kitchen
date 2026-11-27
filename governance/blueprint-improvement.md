@@ -2,7 +2,7 @@
 
 Kitchen maintains the shared delivery blueprint by evaluating work done in product projects. Product projects run Kitchen Brigade on real work and provide the evidence. Kitchen issues are for learning, evaluating, proposing improvements, and tracking their rollout. Product implementation and product-specific fixes stay with the product project.
 
-The [Chief of Staff](../agents/chief-of-staff.md) coordinates this work with Mike. Use Kitchen issues to track shared improvements and product project issues to track project-specific setup or fixes. The Operations Assistant can collect evidence or compare an applied configuration with the intended rollout. Delivery continues to own execution inside each product project.
+The [Chief of Staff](../agents/chief-of-staff.md) coordinates this work with the blueprint approver. Use Kitchen issues to track shared improvements and product project issues to track project-specific setup or fixes. The Operations Assistant can collect evidence or compare an applied configuration with the intended rollout. Delivery continues to own execution inside each product project.
 
 ## Capture and evaluate
 
