@@ -17,7 +17,7 @@ The [team rules](../../governance/team-organisation.md) define portable roles, a
 
 ## Skills and tools
 
-Give both designers the same Shape, prototype, and FigCraft skills. Give both engineers the same Build and delegation skills. Bind `peer-review` to both pairs and Chairman. Give Chairman `review-options` for convening reviews and synthesizing findings. The assistants use the portable [evidence report](../../templates/evidence-report.md) format.
+Give both designers the same Shape and prototype skills. Add a tooling skill for the selected design tool when the project uses one. Give both engineers the same Build and delegation skills. Bind `peer-review` to both pairs and Chairman. Give Chairman `review-options` for convening reviews and synthesizing findings. The assistants use the portable [evidence report](../../templates/evidence-report.md) format.
 
 Resolve the selected design tool from the project setup. Assign its tool skill and workspace-managed MCP entry to the designers who use it. Keep tool selection, connection mapping, and machine settings in the project setup. Keep server registration and assignments in Multica. Verify the saved runtime, model, reasoning, visibility, skill bindings, and workspace MCP assignment before the human starts the first real issue. For projects with different design resources, use their own configured entry and check the active project's resource before editing. Onboard new FigCraft agents with the [concurrent work rules](../figcraft/README.md#concurrent-agent-work). Assign a distinct open file to each simultaneous writer and require explicit document targeting.
 
