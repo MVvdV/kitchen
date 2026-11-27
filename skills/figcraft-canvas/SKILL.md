@@ -5,7 +5,7 @@ description: Work with a collaborator on an explicitly selected FigCraft canvas 
 
 # FigCraft Canvas
 
-Use the assigned FigCraft MCP connection. Confirm the open file and target page or frame using `inspect_document`. Pass the explicit `document` ID or open file path on every supported call, including inspection, edits, exports, and saves. If the target is unclear or closed, pause and ask the collaborator to identify or open it. A tool that depends on the front tab needs exclusive use of the app for that operation.
+Use the assigned FigCraft MCP connection. Confirm the open file and target page or frame using `inspect_document`. Pass the explicit `document` ID or open file path on every supported call, including inspection, edits, exports, and saves. If the MCP connection is unavailable, ask the collaborator to open the project’s configured FigCraft session on the runtime Mac. If the connection works but the target file is closed or unclear, ask them to open or identify that file. Give the exact project-relative file and ask them to reply when it is ready. Keep the issue in its current stage and end the run after the request. Resume on the collaborator’s reply and confirm the target before editing. Launching a desktop app requires separately approved launch instructions. A tool that depends on the front tab needs exclusive use of the app for that operation.
 
 Agents may overlap through the same attached MCP connection when each has its own open file. Keep one writer per editable document, including across pages. If two agents need to edit the same file, sequence their work or use separate working files and let the design owner integrate the accepted changes.
 
