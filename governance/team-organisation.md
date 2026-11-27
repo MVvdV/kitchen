@@ -16,6 +16,12 @@ Staff Shape with two peer designers and Build with two peer engineers. Either pe
 
 Default display names describe the professional role. Use role names in the portable blueprint, instructions, and templates. Record display names only where a specific tool setup needs them. Resolve live links and bindings by stable IDs so later renames can leave those bindings intact.
 
+## Human collaborators and approvers
+
+Use role names in reusable instructions and examples. A human collaborator can contribute feedback, requirements, or review evidence within their access. A project setup identifies who can start Shape and who can approve design and releases. A workspace setup identifies who can approve shared blueprint changes. Different people may hold these roles. Record their identities and scope in the relevant setup.
+
+When collaborators give conflicting direction, summarize the disagreement and ask the designated decision-maker for that scope to resolve it. Record the decision and the revision it applies to. Approval gates verify that the actor was authorized for that gate and candidate.
+
 ## Ownership and handoffs
 
 The product approver chooses the initial Shape owner. Delivery chooses the Build owner once approved scope and dependencies are ready. When returning work for revision, use the previous stage owner if available and select their peer when recovery needs it. Keep one issue owner and one writer for an editable design or implementation. Before transferring ownership, confirm the prior run has stopped and record the exact artifact or commit, completed checks, unfinished work, and next owner. If neither peer is available, leave the recorded checkpoint and use the workflow recovery process.

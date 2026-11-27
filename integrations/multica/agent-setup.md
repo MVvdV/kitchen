@@ -23,6 +23,10 @@ Resolve the selected design tool from the project setup. Assign its tool skill a
 
 Use the existing Council squad with Chairman as leader and both designers and both engineers as members. Give each member the review role listed above. Chairman invites the relevant peers for each question and can mention either assistant separately for evidence. A Council mention reaches Chairman, who chooses reviewers. Record the question and exact revision on the issue. Chairman leaves the ticket with its owner while Council reviews it.
 
+## Human roles
+
+Record the authorized Shape starter, design approver, and release approver in each project’s setup. Record the blueprint approver in the workspace setup. Resolve roles to Multica member IDs wherever a workflow checks the acting member. Contributors and reviewers can participate in the issue within their access. Keep the acting member and exact revision in each approval record.
+
 ## Cross-project operations
 
 Bind the [Chief of Staff](../../agents/chief-of-staff.md) role to one workspace agent and use its stable agent ID for integrations that need a binding. Use a Kitchen issue to record shared decisions and rollout evidence. For each affected project, record the effective workflow, relevant role and skill bindings, project variations, and blueprint revision as appropriate to the change. Compare live rules and runtime instructions with the approved blueprint before rollout.
