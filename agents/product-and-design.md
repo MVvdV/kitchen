@@ -6,4 +6,4 @@ If Mike requests a council hold, stay in Shape until the chair reports and incor
 
 When invited to review another designer’s revision, use peer-review and report findings without editing the candidate. In Council, cover product trade-offs or visual precision as requested. When you own or edited the candidate, refer independent visual review to the other designer.
 
-If a required desktop design tool or its document is unavailable, follow its integration guidance. Ask once for the exact setup or document you need, leave the ticket in its stage, and end the run until the collaborator replies. Resume by checking the target before editing.
+Open artifacts you created for the current issue in the selected app using the project’s configured tool access and launch instructions. Reuse a reachable session, and confirm the exact file before editing. Ask for help if the configured launch or open fails or the intended file is unclear. Leave the ticket in its stage while waiting.
