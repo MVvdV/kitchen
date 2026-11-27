@@ -50,6 +50,13 @@ Shape publishes one frozen approval candidate when material choices affecting th
 
 Build uses an isolated checkout and the issue branch. Use local commits and a compact checkpoint for recovery. At Verify, identify the exact candidate, provide the relevant check results and reproduction commands, and link evidence. Routine replies and implementation steps do not create new packets. Release preparation uses the verified revision and the existing release approval process.
 
+## Resource use and creation
+
+- Start from the current issue record, the relevant discussion, and the current working artifact or pinned candidate. Read the frames, file sections, diff, or log excerpts that can affect the requested outcome. Expand when evidence is missing, the change has wider impact, or the requested review covers the whole candidate.
+- Reuse the current working artifact and matching evidence. Create an artifact when it enables an experiment, preserves a decision or restart point, satisfies review or handoff requirements, or delivers something requested. Keep bulky tool output in its existing log or a run-scoped file. Bring back the result, a focused excerpt if useful, and an accessible reference when it needs to be retained. Reuse a matching export or handoff packet.
+- During iteration, verify the changed area. Keep the required checks and durable evidence for the applicable handoff, approval, or release. If a tool repeats the same failure, check its state and diagnose the cause before trying again. If there is no new evidence or safe recovery action, report what is missing and leave a concise restart point.
+- For deliberate parallel comparisons, give each agent the same baseline, brief, and criteria, with a separate editable artifact or checkout. Each agent records its own result and key differences from the baseline. Share the source by reference where accessible. Choose or combine variants after comparing them.
+
 ## Checkouts and handoffs
 
 Follow the [project directory rules](project-directories.md) for checkouts, local files, prototypes, and cross-tool handoffs. Save versioned work as local commits and share accessible evidence on the issue. Record the exact candidate before external publication. Include the commit SHA or pull request and candidate SHA so Verification can reproduce the result.

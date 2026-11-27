@@ -23,6 +23,12 @@ Resolve the selected design tool from the project setup. Assign its tool skill a
 
 Use the existing Council squad with Chairman as leader and both designers and both engineers as members. Give each member the review role listed above. Chairman invites the relevant peers for each question and can mention either assistant separately for evidence. A Council mention reaches Chairman, who chooses reviewers. Record the question and exact revision on the issue. Chairman leaves the ticket with its owner while Council reviews it.
 
+## Resource-use rollout
+
+Apply the guidance from [shared agent instructions](../../agents/shared.md), [resource use and creation](../../workflows/runbook.md#resource-use-and-creation), and [bounded issue reads](runbook.md) in the Instructions field of each agent in the Kitchen roster. The agent instructions carry the guidance into new runs. Replace older broad-read wording when it conflicts, and preserve each agent's role and project-specific guidance.
+
+Update the existing workspace skills `shape-product`, `figcraft-canvas`, and `build-change` in place from their Kitchen source files. Read back the content and confirm existing bindings on both designer and engineer peers. Resource-use rules apply to each independent variant. Board statuses, handlers, model settings, and MCP connections only need a change if a separate rollout calls for it.
+
 ## Human roles
 
 Record the authorized Shape starter, design approver, and release approver in each project’s setup. Record the blueprint approver in the workspace setup. Resolve roles to Multica member IDs wherever a workflow checks the acting member. Contributors and reviewers can participate in the issue within their access. Keep the acting member and exact revision in each approval record.

@@ -5,7 +5,7 @@ description: Shape a feature or product brief into a reviewable spec when goals,
 
 # Shape Product
 
-Read the brief and available product evidence. Describe the desired outcome and constraints in the user's terms. Ask about unresolved choices only when the answer changes scope, behavior, or verification. Explain the consequence of each choice and offer a recommendation.
+Read the current brief, decision record, and discussion relevant to the question. Open only the evidence needed to decide or check the issue at hand. Expand the review when a design decision affects other flows or when a broad review is requested. Describe the desired outcome and constraints in the user's terms. Ask about unresolved choices only when the answer changes scope, behavior, or verification. Explain the consequence of each choice and offer a recommendation.
 
 During discussion and routine edits, refer to the live design and reply with the change or recommendation and the decision needed now. Default to zero attachments. Include a single focused visual only when the specific question needs it and the live page or frame is insufficient. Save durable decisions in the existing working notes.
 
